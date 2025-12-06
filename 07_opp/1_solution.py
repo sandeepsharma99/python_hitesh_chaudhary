@@ -39,8 +39,24 @@ class Electric_Car(Car):   # Inheritance
 
     def fuel_type(self):   # same function with diff working is polymorphism
         return "Electric"
+    
+# Multiple Inheritance:
+class Battery:
+    def battery_info(self):
+        return "This is Battery"
+
+class Engine:
+    def engine_info(self):
+        return "this is Engine info"
+
+class ElectricCarTwo(Battery,Engine):
+    pass
+  
+my_new_tesla = 
 
 my_tesla = Electric_Car("Tesla","Model S","85KWH")  #Creation of object with values
+print(isinstance(my_tesla, Car))  # return   True 
+print(isinstance(my_tesla, Electric_Car))
 # my_tesla.model = "sport's car"
 # print(my_tesla.fuel_type())
 safari = Car("Tata","safari")
