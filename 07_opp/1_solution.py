@@ -49,14 +49,16 @@ class Engine:
     def engine_info(self):
         return "this is Engine info"
 
-class ElectricCarTwo(Battery,Engine):
+class ElectricCarTwo(Battery,Engine,Car):
     pass
-  
-my_new_tesla = 
+
+my_new_tesla = ElectricCarTwo("Tesla", "Model S")
+print(my_new_tesla.battery_info())
+print(my_new_tesla.engine_info())
 
 my_tesla = Electric_Car("Tesla","Model S","85KWH")  #Creation of object with values
-print(isinstance(my_tesla, Car))  # return   True 
-print(isinstance(my_tesla, Electric_Car))
+# print(isinstance(my_tesla, Car))  # return   True 
+# print(isinstance(my_tesla, Electric_Car))
 # my_tesla.model = "sport's car"
 # print(my_tesla.fuel_type())
 safari = Car("Tata","safari")
@@ -64,7 +66,7 @@ safari = Car("Tata","safari")
 # print(Car.car_count) # gives count of car objec created
 # print(safari.description())
 # print(Car.description())   # print description because @staticmethod
-print(my_tesla.model)
+# print(my_tesla.model)
 # print(my_tesla.full_name())
 
 # my_car = Car("BMW","gran coupe")
