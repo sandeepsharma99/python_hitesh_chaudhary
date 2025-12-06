@@ -1,0 +1,18 @@
+# Decorators 
+# Timing function Execution
+import time
+
+def timer(fun):
+    def wrapper(*args,**kwargs):
+        start = time.time()
+        result = fun(*args,**kwargs)
+        end = time.time()
+        print(f"{fun.__name__} ran in {end-start} time")
+        return result
+    return wrapper
+
+@timer
+def example_func(n):
+    time.sleep(n)
+
+example_func(2)        
