@@ -65,6 +65,6 @@ print(removed_element)
 print(my_list)
 
 # 38. How do you create a list of even numbers using list comprehension?
-# Answer: You can create a list of even numbers using list comprehension with a conditional statement.
+# Answer: You can create a list of even numbers using list comprehension with a conditional statement. 
 even_numbers = [x for x in range(20) if x % 2 == 0]
 print(even_numbers)
