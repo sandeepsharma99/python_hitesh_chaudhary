@@ -1,1 +1,1 @@
-# enumerate : built-in function takes an iterable and retirn an enumerate object , pair of (index,value)
+# enumerate : built-in function takes an iterable and return an enumerate object , pair of (index,value)

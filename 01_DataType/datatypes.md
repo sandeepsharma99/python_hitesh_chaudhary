@@ -4,7 +4,7 @@
 -String : 'spam',"Bob's"
 -Boolean : True , Fale
 -None : None
--List : [1,2,3,["a","b"]] , listg(range(10))
+-List : [1,2,3,["a","b"]] , list(range(10))
 -Tuple : 
 -Dictionary : {'food':'spam','taste':''yam}
 -Set : set('abc'),{'a','b','c'}
