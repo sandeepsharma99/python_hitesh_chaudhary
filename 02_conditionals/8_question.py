@@ -1,6 +1,6 @@
 # Password trength Checker :  Check if a password is "Weak","Strong", "Medium" .Criteria: <6char(Weak), 6-10char (Medium), >10(Strong).
 
-Password = "gsdfjgksdjfkdsbmcxz"
+Password = "gsdfjgksdjfkdsbmcxztask "
 print(len(Password))
 
 if len(Password) <6:
