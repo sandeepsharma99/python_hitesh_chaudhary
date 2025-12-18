@@ -68,3 +68,69 @@ print(my_list)
 # Answer: You can create a list of even numbers using list comprehension with a conditional statement. 
 even_numbers = [x for x in range(20) if x % 2 == 0]
 print(even_numbers)
+
+import math
+
+gcd = math.gcd(48, 18)
+print(gcd)
+
+my_string = "Hello, World!"
+index = my_string.find("World")
+print(index)
+
+import random
+
+random_integers = [random.randint(1, 100) for _ in range(10)]
+print(random_integers)
+
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+
+# Using - operator
+# difference = set1 - set2
+
+# Using difference() method
+difference = set1.difference(set2)
+print(difference)
+
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+
+# Using | operator
+union = set1 | set2
+
+# Using union() method
+union = set1.union(set2)
+print(union)
+
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+
+# Using ^ operator
+sym_diff = set1 ^ set2
+
+# Using symmetric_difference() method
+sym_diff = set1.symmetric_difference(set2)
+print(sym_diff)
+
+number = 12345
+digit_sum = sum(int(digit) for digit in str(number))
+print(digit_sum)
+
+# flattern the list of list
+list_of_lists = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+# Using list comprehension
+flattened_list = [item for sublist in list_of_lists for item in sublist]
+print(flattened_list)
+
+# Using itertools.chain
+import itertools
+flattened_list = list(itertools.chain(*list_of_lists))
+print(flattened_list)
+
+list_of_lists = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+# Using list comprehension
+flattened_list = [item for sublist in list_of_lists for item in sublist]
+print(flattened_list)
