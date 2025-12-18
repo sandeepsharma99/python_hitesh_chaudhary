@@ -51,7 +51,7 @@ else:
 # print(my_dict.items()) # return dict_item object containing set of key ,value pair in tuple # Converts dict → (key, value) tuples
 
 my_dict = {'apple': 3, 'banana': 1, 'cherry': 2}
-sorted_dict = dict(sorted(my_dict.items(), key=lambda item: item[1]))
+sorted_dict = dict(sorted(my_dict.items(), key=lambda item: item[1])) 
 print(sorted_dict)
 
 #36. How do you remove an element from a list by index in Python?
