@@ -2,6 +2,9 @@
 Ans : Python is an interpreter dynamically typed object oriented high level programming language.
 it is known for its simple syntax 
 vast library and package support
+case sensitive like Apple and apple both are different. varaible
+rapid app development attract developer
+it is widely used in data science/analytics app development game development mostely in al/ml
 
 
 my_dict = {'apple': 3, 'banana': 1, 'cherry': 2}
