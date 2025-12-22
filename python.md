@@ -14,6 +14,18 @@ import datetime
 now = datetime.datetime.now()
 ```
 
+# 3 : DataType ?
+- there are 5 datatype
+string 
+boollean 
+number
+iterable 
+
+```python
+import datetime
+now = datetime.datetime.now()
+```
+
 my_dict = {'apple': 3, 'banana': 1, 'cherry': 2}
 sorted_dict = dict(sorted(my_dict.items(), key=lambda item: item[1])) 
 print(sorted_dict)
