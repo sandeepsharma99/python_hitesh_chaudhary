@@ -16,10 +16,13 @@ now = datetime.datetime.now()
 
 # 3 : DataType ?
 - there are 5 datatype
-string 
-boollean 
-number
-iterable 
+### 3. DataType?
+
+1. String
+2. Boolean
+3. Number
+4. Iterable
+5. None
 
 ```python
 import datetime
