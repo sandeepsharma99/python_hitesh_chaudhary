@@ -29,9 +29,7 @@ The primary categories include Numeric, Sequence , Mapping, Set, Boolean, NoneTy
 6. NoneType : None
 7. Binary Types : bytes
 
-# what is mutable and immutable
-
-### Key Differences Between Mutable and Immutable Data Types
+# Q what is mutable and immutable
 
 | Parameter | Mutable Data Types | Immutable Data Types |
 |---------|-------------------|---------------------|
@@ -41,22 +39,21 @@ The primary categories include Numeric, Sequence , Mapping, Set, Boolean, NoneTy
 | Use Cases | When content needs frequent updates | When data integrity is crucial |
 | Thread Safety | Less safe in multi-threaded environments | Inherently thread-safe |
 
+# what is iterator ?
+Ans : an iterator is the object that performs the iteration. You get an iterator from an iterable.  iter()
+Check for More : check if ``next()` raises StopIteration
+
+# what is class and object ?
+### class : in oop class is a blueprint/template for creating object 
+- to create class we,uswe class keyword followed by classname :
+- inside class you typically define attributes and methods
+- The class definition doesn't take up memory until objects are created from it, but each object does.  
+### object  : object is the real instanc of that blueprint/template
+- To create an object we simply call class like function, and pass the argument require by `__init__()`
+
+# Q Map ,filter ,reduce
+- map: Applies a function to every item in an iterable. return a map object (an iterator), to see result you must convert explicitly into list(filter(func,iterable)).
+- filter: used to extrat element from an iterable based on specific condition. it applies a testing function to each element and keep only those for which the function return true
+- reduce: Applies a function to the items of an iterable and accumulate/combine it to a single value.
 
 
-```python
-import datetime
-now = datetime.datetime.now()
-a =  
-```
-
-my_dict = {'apple': 3, 'banana': 1, 'cherry': 2}
-sorted_dict = dict(sorted(my_dict.items(), key=lambda item: item[1])) 
-print(sorted_dict)
-
-```python
-
-name = "Ashish"
-age = 25
-formatted_string = "My name is {} and I am {} years old.".format(name, age)
-formatted_string_f = f"My name is {name} and I am {age} years old."
-```
