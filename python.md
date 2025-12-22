@@ -1,6 +1,5 @@
-# What is python ?  
-## Ans : 
-Python is an interpreter dynamically typed object oriented high level programming language.
+# 1 : What is python ?  
+Ans : Python is an interpreter dynamically typed object oriented high level programming language.
 
 
 my_dict = {'apple': 3, 'banana': 1, 'cherry': 2}
