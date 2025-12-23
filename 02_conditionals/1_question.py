@@ -12,27 +12,7 @@ elif age<60:
 else:
     print("Senior")
 
-# vnxcmxzbncvnxbz
-# vnxcmxzbncvnxbz
-# vnxcmxzbncvnxbz
-# vnxcmxzbncvnxbz
-# vnxcmxzbncvnxbz
-# vnxcmxzbncvnxbz
-# vnxcmxzbncvnxbz
-# vnxcmxzbncvnxbz
-# vnxcmxzbncvnxbz
-# vnxcmxzbncvnxbz
-# vnxcmxzbncvnxbz
-# vnxcmxzbncvnxbz
-# vnxcmxzbncvnxbz
-# vnxcmxzbncvnxbz
-# vnxcmxzbncvnxbz
-# vnxcmxzbncvnxbz
-# vnxcmxzbncvnxbz
-# vnxcmxzbncvnxbz
-# vnxcmxzbncvnxbz
-# vnxcmxzbncvnxbz
-# vnxcmxzbncvnxbz
+
 # vnxcmxzbncvnxbz
 # vnxcmxzbncvnxbz
 # vnxcmxzbncvnxbz
