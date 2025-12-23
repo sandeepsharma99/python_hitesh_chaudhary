@@ -39,11 +39,11 @@ The primary categories include Numeric, Sequence , Mapping, Set, Boolean, NoneTy
 | Use Cases | When content needs frequent updates | When data integrity is crucial |
 | Thread Safety | Less safe in multi-threaded environments | Inherently thread-safe |
 
-# what is iterator ?
+# Q what is iterator ?
 Ans : an iterator is the object that performs the iteration. You get an iterator from an iterable.  iter()
 Check for More : check if ``next()` raises StopIteration
 
-# what is class and object ?
+# Q what is class and object ?
 ### class : in oop class is a blueprint/template for creating object 
 - to create class we,uswe class keyword followed by classname :
 - inside class you typically define attributes and methods
