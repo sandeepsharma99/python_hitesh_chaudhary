@@ -145,7 +145,8 @@ print(merged_dict) # Output: {'a': 1, 'b': 3, 'c': 4}
 ```
 
 #  Q difference between append and extend
-ans :| Feature | `append()` | `extend()` |
+ans :
+| Feature | `append()` | `extend()` |
 |-------|------------|------------|
 | What it does | Adds a **single item** as one element at the end | Adds **each element** from an iterable separately |
 | Argument type | Any object (int, str, list, tuple, etc.) | Iterable only (list, tuple, set, string, etc.) |
@@ -154,5 +155,6 @@ ans :| Feature | `append()` | `extend()` |
 | Nested list | Creates a nested list if list is passed | Does **not** create nested list |
 
 # Q how do you reverse a list/string
-Ans : 1. using .reverse() method
-    2. using slicing  reversed_list = list[::-1]
+Ans :
+1. using .reverse() method
+2. using slicing  reversed_list = list[::-1]
