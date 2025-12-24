@@ -19,15 +19,18 @@ now = datetime.datetime.now()
 
 # Q DataType ?
 - Python has several built-in data types to classify values/information, which represent what kind of value is stored and what operation can be performed on the data. 
-The primary categories include Numeric, Sequence , Mapping, Set, Boolean, NoneType and Binary Types. 
+There are following `7` categories: Numeric, Sequence , Mapping, Set, Boolean, NoneType and Binary Types. 
 
-1. Numeric : int, float, complex
+1. Numeric : int, float(decimals), complex
 2. Sequence : string("", immutable sequence of character) ,list , tuple
-3. Mapping : Dictionary ({"Unique key":"value"},unordered)
+3. Mapping : Dictionary (collection of{"Unique key":"value"},unordered)
 4. Settype : set(mutable) , frozenset(immutable)
 5. Boolean : True(1) , false(0)
 6. NoneType : None
 7. Binary Types : bytes
+
+# Q : what is memory address/id() ?
+Ans: id() is built-in function which refers tothe memory address(unique identifier of an object) allocated to the object
 
 # Q what is mutable and immutable
 

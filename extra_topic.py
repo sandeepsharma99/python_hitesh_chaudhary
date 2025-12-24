@@ -134,3 +134,17 @@ list_of_lists = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 # Using list comprehension
 flattened_list = [item for sublist in list_of_lists for item in sublist]
 print(flattened_list)
+
+x = 10
+y = x
+z = 20
+
+print(f"ID of x: {id(x)}")
+print(f"ID of y: {id(y)}")
+print(f"ID of z: {id(z)}")
+
+# x and y refer to the same object, so their IDs are the same
+print(f"x is y: {x is y}")
+
+# x and z refer to different objects, so their IDs are different
+print(f"x is z: {x is z}")
