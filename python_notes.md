@@ -73,15 +73,36 @@ Project B needs Django 5.0
 If both are installed globally ❌ → version conflict
 
 # how do you read and write json data ?
-ans:In Python, the built-in json module is used to work with JSON data, primarily using the     .load functions for reading and .dump functions for writing
+ans: In Python, the built-in json module is used to work with JSON data, primarily using the     `.load` functions for reading and `.dump` functions for writing
 Use a with open() statement to ensure the file is properly closed
 
 ```python
 import json
 
-with open('data.json', 'r') as file:
+with open('data.json', 'r') as file: #ensure file close properly
     # Deserialize the file content into a Python object (e.g., dictionary)
     data = json.load(file)
 
 print(data)
 print(type(data))
+```
+# Q Dictionary and method 
+ans : Dictionary (in programming, especially Python) is a ``mutable & Ordered`` data structure stores data as unique key-value pairs,`offering fast lookups`
+- uses hasing for quick access
+- ## Hashing converts a key into a number (hash value).
+This hash value tells Python where to store and find the data in memory.
+So Python doesn’t search — it jumps directly to the location.
+## Methods:
+
+```python
+dict1 = {'a': 1, 'b': 2}
+dict2 = {'b': 3, 'c': 4}
+
+# Using update() method
+dict1.update(dict2)
+print(dict1)
+
+# Using ** unpacking operator (Python 3.5+)
+merged_dict = {**dict1, **dict2}
+print(merged_dict)
+```
