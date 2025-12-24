@@ -159,9 +159,27 @@ Ans :
 1. using .reverse() method
 2. using slicing  reversed_list = list[::-1]
 
+# Q what is 
+Ans:
+## Difference between `sort()` and `sorted()`
+
+| Feature | `sort()` | `sorted()` |
+|------|---------|-----------|
+| Type | List method | Built-in function |
+| Modifies original list | ✅ Yes | ❌ No |
+| Return value | `None` | Returns a **new sorted list** |
+| Works on | Only lists | Any iterable (list, tuple, set, etc.) |
+| Memory usage | More efficient (in-place) | Uses extra memory |
+| Original data | Original list is changed | Original iterable remains unchanged |
+| Usage example | `mylist.sort()` | `sorted(mylist)` |
+
+
 # Q How do you sort a dictionary by value
 Ans : 
 ```python 
 my_dict = {'apple': 3, 'banana': 1, 'cherry': 2}
 sorted_dict = dict(sorted(my_dict.items(), key=lambda item: item[1]))
-print(sorted_dict) ```
+print(sorted_dict) 
+```
+my_dict.items() returns  return dict_item object containing set of key ,value pair in tuple 
+item: item[1] represent values of dict_item object
