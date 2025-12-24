@@ -92,17 +92,41 @@ ans : In Python Dictionary is a ``mutable & Ordered`` data structure stores data
 - ## Hashing converts a key into a number (hash value).
 This hash value tells Python where to store and find the data in memory.
 So Python doesn’t search — it jumps directly to the location.
-## Methods:
+`dict1 = {'a': 1, 'b': 2}
+dict2 = {'b': 3, 'c': 4}`
 
-``python
+## Methods:
+- merge: using .update
+- .items():
+- merge:
+- merge:
+
+
+```python
 dict1 = {'a': 1, 'b': 2}
 dict2 = {'b': 3, 'c': 4}
 
 # Using update() method
-dict1.update(dict2)
-print(dict1)
+dict1.update(dict2) # to merge two dict returns : a new dictionary
+print(dict1) # Output: {'a': 1, 'b': 3, 'c': 4}
+
+# Using union operator(|)
+merged = d1 | d2
+print(merged) # Output: {'a': 1, 'b': 3, 'c': 4}
 
 # Using ** unpacking operator (Python 3.5+)
 merged_dict = {**dict1, **dict2}
-print(merged_dict)
-``
+print(merged_dict) # Output: {'a': 1, 'b': 3, 'c': 4}
+```
+
+#  Q difference between append and extend
+ans :
+
+| Feature | `append()` | `extend()` |
+|-------|------------|------------|
+| What it does | Adds a **single item** as one element at the end | Adds **each element** from an iterable separately |
+| Argument type | Any object (int, str, list, tuple, etc.) | Iterable only (list, tuple, set, string, etc.) |
+| Effect on list | Always adds **one element** | Adds **multiple elements** |
+| Change in length | Increases list length by **1** | Increases list length by **number of items** |
+| Nested list | Creates a nested list if list is passed | Does **not** create nested list |
+
