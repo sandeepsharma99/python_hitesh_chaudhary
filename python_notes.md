@@ -1,4 +1,4 @@
-# Q What is python ?  
+# Q: What is python ?  
 Ans : 
 - Python is an interpreter dynamically typed object oriented high level programming language.
 - it is known for its simple syntax 
@@ -7,17 +7,17 @@ Ans :
 - rapid app development attract developer
 - it is widely used in data science/analytics app development game development mostely in al/ml
 
-# Q Dynamic Typing 
+# Q: Dynamic Typing 
 - Python determines variable types at runtime based on the assigned value, so explicit declaration is not needed.
 
-# Q how do you work with date and time ?
+# Q: how do you work with date and time ?
 - simply we import date and time module then.now()
 ```python
 import datetime
 now = datetime.datetime.now()
 ```
 
-# Q DataType ?
+# Q: DataType ?
 - Python has several built-in data types to classify values/information, which represent what kind of value is stored and what operation can be performed on the data. 
 There are following `7` categories: Numeric, Sequence , Mapping, Set, Boolean, NoneType and Binary Types. 
 
@@ -29,10 +29,10 @@ There are following `7` categories: Numeric, Sequence , Mapping, Set, Boolean, N
 6. NoneType : None
 7. Binary Types : bytes
 
-# Q : what is memory address/id() ?
+# Q: what is memory address/id() ?
 Ans: id() is built-in function which refers tothe memory address(unique identifier of an object) allocated to the object
 
-# Q what is mutable and immutable
+# Q: what is mutable and immutable
 
 | Parameter | Mutable Data Types | Immutable Data Types |
 |---------|-------------------|---------------------|
@@ -42,11 +42,11 @@ Ans: id() is built-in function which refers tothe memory address(unique identifi
 | Use Cases | When content needs frequent updates | When data integrity is crucial |
 | Thread Safety | Less safe in multi-threaded environments | Inherently thread-safe |
 
-# Q what is iterator ?
+# Q: what is iterator ?
 Ans : an iterator is the object that performs the iteration. You get an iterator from an iterable.  iter()
 Check for More : check if ``next()` raises StopIteration
 
-# Q what is class and object ?
+# Q: what is class and object ?
 ### class : in oop class is a blueprint/template for creating object 
 - to create class we,uswe class keyword followed by classname :
 - inside class you typically define attributes and methods
@@ -54,15 +54,15 @@ Check for More : check if ``next()` raises StopIteration
 ### object  : object is the real instanc of that blueprint/template
 - To create an object we simply call class like function, and pass the argument require by `__init__()`
 
-# Q Map ,filter ,reduce
+# Q: Map ,filter ,reduce
 - map: Applies a function to every item in an iterable. return a map object (an iterator), to see result you must convert explicitly into list(filter(func,iterable)).
 - filter: used to extrat element from an iterable based on specific condition. it applies a testing function to each element and keep only those for which the function return true
 - reduce: Applies a function to the items of an iterable and accumulate/combine it to a single value.
 
-# Q Ways to join concatenate string 
+# Q: Ways to join concatenate string 
 ans : using `+` operator , "".join() method & f-strings method f"{str1}{str2}"
 
-# Q What is virtual enviroment ?
+# Q: What is virtual enviroment ?
 ans : A virtual environment is an **`isolated`** Python environment that allows you to manage dependencies for each project separately 
 To create virtual enviroment `python -m venv venv` and to activate `venv\Scripts\activate`
 - Prevents package/version conflicts in project
@@ -72,7 +72,7 @@ Project A needs Django 3.2
 Project B needs Django 5.0
 If both are installed globally ❌ → version conflict
 
-# how do you read and write json data ?
+# Q: how do you read and write json data ?
 ans: In Python, the built-in json module is used to work with JSON data, primarily using the     `.load` functions for reading and `.dump` functions for writing
 Use a with open() statement to ensure the file is properly closed
 
@@ -86,7 +86,7 @@ with open('data.json', 'r') as file: #ensure file close properly
 print(data)
 print(type(data))
 ```
-# Q String and method " "
+# Q: String and method " "
 Ans : sequence of character , immutable , represent by 'string',"string","""string"""
 ## Methods:
 - `+` :
@@ -114,21 +114,21 @@ Ans : sequence of character , immutable , represent by 'string',"string","""stri
 - `f-strings` : string literals f"My name is {name},I live in {city}"
 - `in keyword`: 
 
-# Q How can you print a string without resolving escape sequences in Python?
+# Q: How can you print a string without resolving escape sequences in Python?
 ans : In python repr() function ensure that the escape sequences are displayed as part of the string rather than being processed.
 
 Example:string = "Hello\nWorld\t!"
 print(repr(string))  # Output: 'Hello\nWorld\t!'
 
-# Q List and its method []
-Ans : list is a mutable collection of items in order manner and it Can store mixed data types (int, str, bool, and even other lists). it can contain duplicate items 
+# Q: List and its method []
+Ans : list is a ``mutable & Ordered`` data structure stores mixed datatypes(int, str, bool, and even other lists). it can contain duplicate items 
 ```Python
     syntax : mylist = [1, 2, 3, 4, 5]
 ```
-## Methods 
+### Methods 
 ```Python
      mylist.append(element) #
-     mylist.extend(iterable) #
+     mylist.extend(iterable) # merge two list retu
      mylist.insert(index,element) #
      mylist.remove(element) #
      mylist.pop() #
@@ -136,15 +136,15 @@ Ans : list is a mutable collection of items in order manner and it Can store mix
      mylist.reverse() #
      mylist.copy() #
 ```
-# Q what is List comprehension
+# Q: what is List comprehension
 Ans : 
 - list comprehension is shortahnd way to create list
 - Alternative of for loop or func like map() & filter()
 - basic syntax is enclose in square bracket 
 `even_no = [x for x in range(10) if x%2==0] `
 
-# Q Dictionary and method {}
-ans : In Python Dictionary is a ``mutable & Ordered`` data structure stores data as unique key-value pairs,
+# Q: Dictionary and method {}
+ans : In Python Dictionary is a ``mutable & Ordered`` data structure stores data as unique key-value pairs, can store nested dictionary
 - `offering fast lookups` because it uses hasing for quick access
 - ## Hashing converts a key into a number (hash value).
 This hash value tells Python where to store and find the data in memory.
@@ -152,15 +152,33 @@ So Python doesn’t search — it jumps directly to the location.
 `dict1 = {'a': 1, 'b': 2}
 dict2 = {'b': 3, 'c': 4}`
 ```python
-# Create a sample dictionary
-my_dict = {'Animal': 'Lion', 'Order': 'Carnivora', 'Kingdom': 'Animalia'}
+my_dict = {'Animal': 'Lion', 'Order': 'Carnivora', 'Kingdom': 'Animalia'} # Create a sample dictionary
 
 # Get the dictionary items view object
-dict_items_view = my_dict.items()
+dict_items_view = my_dict.items() # return view object Each item in the view object is a tuple in the format (key, value)
 print(f"The dictionary view object: {dict_items_view}")
 # Output: The dictionary view object: dict_items([('Animal', 'Lion'), ('Order', 'Carnivora'), ('Kingdom', 'Animalia')]) 
 ```
-## Methods:
+```Python
+    syntax : mydict = {"name": "Sandeep", "age": 21, "city": "Delhi"}
+```
+### Methods 
+```Python
+    mydict.get("name") #Returns value for specified key    
+    mydict.get("salary", defaultvalue) # if the specified key does not exist return none/defaultvalue(optional)
+    mydict.keys() #
+    mydict.values() #
+    mydict.items() #
+    mydict.setdefault("gender", "Male") #
+    mydict.setdefault("age", 25) #
+    update({"age": 22, "country": "India"}) #
+    mydict.pop("city")
+    mydict.popitem()
+    mydict.copy()
+    keys = ["a", "b", "c"]
+    new_dict = dict.fromkeys(keys, 0)
+    mydict.clear()
+```
 - merge: using .update(), union operator, **unpacing
 - mydict.items(): return view object
 - merge:
@@ -184,7 +202,7 @@ merged_dict = {**dict1, **dict2}
 print(merged_dict) # Output: {'a': 1, 'b': 3, 'c': 4}
 ```
 
-#  Q difference between append and extend
+# Q: difference between append and extend
 ans :
 | Feature | `append()` | `extend()` |
 |-------|------------|------------|
@@ -194,12 +212,12 @@ ans :
 | Change in length | Increases list length by **1** | Increases list length by **number of items** |
 | Nested list | Creates a nested list if list is passed | Does **not** create nested list |
 
-# Q how do you reverse a list/string
+# Q: how do you reverse a list/string
 Ans :
 1. using .reverse() method
 2. using slicing  reversed_list = list[::-1]
 
-# Q what is Difference between sort() and sorted()
+# Q: what is Difference between sort() and sorted()
 Ans:
 
 | Feature | `sort()` | `sorted()` |
@@ -211,7 +229,7 @@ Ans:
 | Works on |apply Only on lists | Any iterable (string, list, tuple, set, etc.) |
 | Memory usage | More efficient (in-place) | Uses extra memory for new list |
 
-# Q How do you sort a dictionary by value
+# Q: How do you sort a dictionary by value
 Ans : 
 ```python 
 my_dict = {'apple': 3, 'banana': 1, 'cherry': 2}
