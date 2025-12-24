@@ -71,3 +71,17 @@ Imagine this situation:
 Project A needs Django 3.2
 Project B needs Django 5.0
 If both are installed globally ❌ → version conflict
+
+# how do you read and write json data ?
+ans:In Python, the built-in json module is used to work with JSON data, primarily using the     .load functions for reading and .dump functions for writing
+Use a with open() statement to ensure the file is properly closed
+
+```python
+import json
+
+with open('data.json', 'r') as file:
+    # Deserialize the file content into a Python object (e.g., dictionary)
+    data = json.load(file)
+
+print(data)
+print(type(data))
