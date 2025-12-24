@@ -86,7 +86,32 @@ with open('data.json', 'r') as file: #ensure file close properly
 print(data)
 print(type(data))
 ```
-# Q Dictionary and method 
+# Q String and method " "
+Ans : sequence of character , immutable , represent by 'string',"string","""string"""
+## Methods:
+- `+` :
+- `String Slicing` :
+- `Accessing characters` :
+- `find(value)` :
+- `.replace(_,_)` :
+- `.reverse()` :
+- `startswith()/endswith()` :
+- `title()` :
+- `count()` :
+- `isalpha()` :
+- `strip()` :
+- `len()` :
+- `len` :
+- `f-strings` :
+- `in keyword`
+
+# Q How can you print a string without resolving escape sequences in Python?
+ans : In python repr() function ensure that the escape sequences are displayed as part of the string rather than being processed.
+
+Example:string = "Hello\nWorld\t!"
+print(repr(string))  # Output: 'Hello\nWorld\t!'
+
+# Q Dictionary and method {}
 ans : In Python Dictionary is a ``mutable & Ordered`` data structure stores data as unique key-value pairs,
 - `offering fast lookups` because it uses hasing for quick access
 - ## Hashing converts a key into a number (hash value).
@@ -120,9 +145,7 @@ print(merged_dict) # Output: {'a': 1, 'b': 3, 'c': 4}
 ```
 
 #  Q difference between append and extend
-ans :
-
-| Feature | `append()` | `extend()` |
+ans :| Feature | `append()` | `extend()` |
 |-------|------------|------------|
 | What it does | Adds a **single item** as one element at the end | Adds **each element** from an iterable separately |
 | Argument type | Any object (int, str, list, tuple, etc.) | Iterable only (list, tuple, set, string, etc.) |
@@ -130,3 +153,6 @@ ans :
 | Change in length | Increases list length by **1** | Increases list length by **number of items** |
 | Nested list | Creates a nested list if list is passed | Does **not** create nested list |
 
+# Q how do you reverse a list/string
+Ans : 1. using .reverse() method
+    2. using slicing  reversed_list = list[::-1]
