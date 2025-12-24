@@ -90,6 +90,7 @@ print(type(data))
 Ans : sequence of character , immutable , represent by 'string',"string","""string"""
 ## Methods:
 - `+` :
+- `separator.join(iterable)` : returns a new single string
 - `insert(index,element)`:
 - `String Slicing-[::]` :
 - `.copy()` :
@@ -135,7 +136,12 @@ Ans : list is a mutable collection of items in order manner and it Can store mix
      mylist.reverse() #
      mylist.copy() #
 ```
-
+# Q what is List comprehension
+Ans : 
+- list comprehension is shortahnd way to create list
+- Alternative of for loop or func like map() & filter()
+- basic syntax is enclose in square bracket 
+`even_no = [x for x in range(10) if x%2==0] `
 
 # Q Dictionary and method {}
 ans : In Python Dictionary is a ``mutable & Ordered`` data structure stores data as unique key-value pairs,
@@ -205,8 +211,6 @@ Ans:
 | Works on |apply Only on lists | Any iterable (string, list, tuple, set, etc.) |
 | Memory usage | More efficient (in-place) | Uses extra memory for new list |
 
-
-
 # Q How do you sort a dictionary by value
 Ans : 
 ```python 
@@ -217,9 +221,75 @@ print(sorted_dict)
 my_dict.items() returns  return dict_item object containing set of key ,value pair in tuple 
 item: item[1] represent values of dict_item object
 
-# Q what is List comprehension
+# Q: Frozenset 
+Ans: Frozenset is an immutable and hashable version of standard set. it is unordered collection of unique element.
+```Python
+my_set = {1, 2, 3, 4, 5}
+frozen_set = frozenset(my_set)
+print(frozen_set)   
+```
+# Q:How do you find the sum of digits of an integer in Python?
+Ans: You can find the sum of digits of an integer by converting it to a string, iterating over each character, and summing their integer values.
+```Python
+number = 12345
+digit_sum = sum(int(digit) for digit in str(number))
+print(digit_sum)
+```
+# Q:How do you flatten a list of lists in Python?
+Ans :
+```Python
+list_of_lists = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+# Using list comprehension
+flattened_list = [item for sublist in list_of_lists for item in sublist]
+print(flattened_list)
+```
+# Q:How do you find the most common element in a list in Python?
 Ans : 
-- list comprehension is shortahnd way to create list
-- Alternative of for loop or func like map() & filter()
-- basic syntax is enclose in square bracket 
-`even_no = [x for x in range(10) if x%2==0] `
+```Python
+from collections import Counter # first importing counter from collection
+
+my_list = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]
+most_common_element = Counter(my_list).most_common(1)[0][0]
+print(most_common_element)
+```
+# Q:How do you check if a number is prime in Python?
+Ans :
+```Python
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+print(is_prime(11))
+print(is_prime(4))
+```
+
+# Q:How do you find the greatest common divisor (GCD) of two numbers in Python?
+Ans: 
+```Python
+import math
+
+gcd = math.gcd(48, 18)
+print(gcd)
+```
+# Q:How do you convert a list of integers to a single integer in Python?
+Ans : You can convert a list of integers to a single integer by converting each element to a string and then joining them.
+```Python
+int_list = [1, 2, 3, 4, 5]
+single_integer = int("".join(map(str, int_list))) # str is keyword which is used to typecasting str(--)
+print(single_integer)
+```
+# Q:
+# Q:
+# Q:
+# Q:
+# Q:
+```Python
+
+```
+
+
