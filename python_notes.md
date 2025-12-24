@@ -59,4 +59,15 @@ Check for More : check if ``next()` raises StopIteration
 - filter: used to extrat element from an iterable based on specific condition. it applies a testing function to each element and keep only those for which the function return true
 - reduce: Applies a function to the items of an iterable and accumulate/combine it to a single value.
 
+# Q Ways to join concatenate string 
+ans : using `+` operator , "".join() method & f-strings method f"{str1}{str2}"
 
+# Q What is virtual enviroment ?
+ans : A virtual environment is an isolated Python environment that allows you to manage dependencies for each project separately 
+To create virtual enviroment `python -m venv venv` and to activate `venv\Scripts\activate`
+- Prevents package/version conflicts in project
+Why do we need a virtual environment? 🤔
+Imagine this situation:
+Project A needs Django 3.2
+Project B needs Django 5.0
+If both are installed globally ❌ → version conflict
