@@ -165,13 +165,13 @@ Ans:
 
 | Feature | `sort()` | `sorted()` |
 |------|---------|-----------|
+| Syntax | `mylist.sort()` | `sorted(iterable,key,reverse = false,)` |
 | Type | List method | Built-in function |
-| Modifies original list | ✅ Yes | ❌ No |
+| Modifies original list | modifies the originallist | Keep the original same  |
 | Return value | `None` | Returns a **new sorted list** |
-| Works on | Only lists | Any iterable (list, tuple, set, etc.) |
-| Memory usage | More efficient (in-place) | Uses extra memory |
-| Original data | Original list is changed | Original iterable remains unchanged |
-| Usage example | `mylist.sort()` | `sorted(mylist)` |
+| Works on |apply Only on lists | Any iterable (string, list, tuple, set, etc.) |
+| Memory usage | More efficient (in-place) | Uses extra memory for new list |
+
 
 
 # Q How do you sort a dictionary by value
