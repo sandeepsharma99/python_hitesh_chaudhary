@@ -90,26 +90,52 @@ print(type(data))
 Ans : sequence of character , immutable , represent by 'string',"string","""string"""
 ## Methods:
 - `+` :
-- `String Slicing` :
-- `Accessing characters` :
-- `find(value)` :
-- `.replace(_,_)` :
-- `.reverse()` :
+- `insert(index,element)`:
+- `String Slicing-[::]` :
+- `.copy()` :
+- `Accessing characters mystr[index]` :
+- `find("",startindex,endindex)` : startindex,endindex optional return index value 
+- `.index()` : return indexof first occurrence For data structures other than strings
+- `.update()` : return None, used with dictionaries and sets to add items
+- `.replace(old_substring,new_substring,count)` : count optional, by default replace all the occurrance returns a new string
+- `.reverse()` : Returns None syntax: my_list.reverse()
+- `.remove(value)` : remove the first occurring value matching the given parameter from list in place modifies return updated list
+- `.pop(index)` : -> list method
+- `.push(index)` : -> list method
+- `del a[index]` : 
+- `.clear()` : return None syntax : MyList.clear()
 - `startswith()/endswith()` :
-- `title()` :
+- `title()` : 
 - `count()` :
 - `isalpha()` :
-- `strip()` :
-- `len()` :
-- `len` :
-- `f-strings` :
-- `in keyword`
+- `strip()` : returns a new string
+- `len(iterable)` : always returns an integer value=
+- `f-strings` : string literals f"My name is {name},I live in {city}"
+- `in keyword`: 
 
 # Q How can you print a string without resolving escape sequences in Python?
 ans : In python repr() function ensure that the escape sequences are displayed as part of the string rather than being processed.
 
 Example:string = "Hello\nWorld\t!"
 print(repr(string))  # Output: 'Hello\nWorld\t!'
+
+# Q List and its method []
+Ans : list is a mutable collection of items in order manner and it Can store mixed data types (int, str, bool, and even other lists). it can contain duplicate items 
+```Python
+    syntax : mylist = [1, 2, 3, 4, 5]
+```
+## Methods 
+```Python
+     mylist.append(element) #
+     mylist.extend(iterable) #
+     mylist.insert(index,element) #
+     mylist.remove(element) #
+     mylist.pop() #
+     mylist.sort(key=None, reverse=False) #
+     mylist.reverse() #
+     mylist.copy() #
+```
+
 
 # Q Dictionary and method {}
 ans : In Python Dictionary is a ``mutable & Ordered`` data structure stores data as unique key-value pairs,
@@ -119,10 +145,18 @@ This hash value tells Python where to store and find the data in memory.
 So Python doesn’t search — it jumps directly to the location.
 `dict1 = {'a': 1, 'b': 2}
 dict2 = {'b': 3, 'c': 4}`
+```python
+# Create a sample dictionary
+my_dict = {'Animal': 'Lion', 'Order': 'Carnivora', 'Kingdom': 'Animalia'}
 
+# Get the dictionary items view object
+dict_items_view = my_dict.items()
+print(f"The dictionary view object: {dict_items_view}")
+# Output: The dictionary view object: dict_items([('Animal', 'Lion'), ('Order', 'Carnivora'), ('Kingdom', 'Animalia')]) 
+```
 ## Methods:
-- merge: using .update
-- .items():
+- merge: using .update(), union operator, **unpacing
+- mydict.items(): return view object
 - merge:
 - merge:
 
@@ -159,13 +193,12 @@ Ans :
 1. using .reverse() method
 2. using slicing  reversed_list = list[::-1]
 
-# Q what is 
+# Q what is Difference between sort() and sorted()
 Ans:
-## Difference between `sort()` and `sorted()`
 
 | Feature | `sort()` | `sorted()` |
 |------|---------|-----------|
-| Syntax | `mylist.sort()` | `sorted(iterable,key,reverse = false,)` |
+| Syntax | `mylist.sort()` | `sorted(iterable,key=len,reverse = false,)` |
 | Type | List method | Built-in function |
 | Modifies original list | modifies the originallist | Keep the original same  |
 | Return value | `None` | Returns a **new sorted list** |
@@ -183,3 +216,10 @@ print(sorted_dict)
 ```
 my_dict.items() returns  return dict_item object containing set of key ,value pair in tuple 
 item: item[1] represent values of dict_item object
+
+# Q what is List comprehension
+Ans : 
+- list comprehension is shortahnd way to create list
+- Alternative of for loop or func like map() & filter()
+- basic syntax is enclose in square bracket 
+`even_no = [x for x in range(10) if x%2==0] `
