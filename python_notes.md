@@ -87,14 +87,14 @@ print(data)
 print(type(data))
 ```
 # Q Dictionary and method 
-ans : Dictionary (in programming, especially Python) is a ``mutable & Ordered`` data structure stores data as unique key-value pairs,`offering fast lookups`
-- uses hasing for quick access
+ans : In Python Dictionary is a ``mutable & Ordered`` data structure stores data as unique key-value pairs,
+- `offering fast lookups` because it uses hasing for quick access
 - ## Hashing converts a key into a number (hash value).
 This hash value tells Python where to store and find the data in memory.
 So Python doesn’t search — it jumps directly to the location.
 ## Methods:
 
-```python
+``python
 dict1 = {'a': 1, 'b': 2}
 dict2 = {'b': 3, 'c': 4}
 
@@ -105,4 +105,4 @@ print(dict1)
 # Using ** unpacking operator (Python 3.5+)
 merged_dict = {**dict1, **dict2}
 print(merged_dict)
-```
+``
