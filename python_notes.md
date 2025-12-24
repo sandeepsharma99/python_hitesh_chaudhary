@@ -63,7 +63,7 @@ Check for More : check if ``next()` raises StopIteration
 ans : using `+` operator , "".join() method & f-strings method f"{str1}{str2}"
 
 # Q What is virtual enviroment ?
-ans : A virtual environment is an isolated Python environment that allows you to manage dependencies for each project separately 
+ans : A virtual environment is an **`isolated`** Python environment that allows you to manage dependencies for each project separately 
 To create virtual enviroment `python -m venv venv` and to activate `venv\Scripts\activate`
 - Prevents package/version conflicts in project
 Why do we need a virtual environment? 🤔
