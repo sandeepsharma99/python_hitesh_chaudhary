@@ -88,26 +88,38 @@ print(type(data))
 ```
 # Q: String and method " "
 Ans : sequence of character , immutable , represent by 'string',"string","""string"""
+```python
+mystr = "  Python Programming 123  "
+```
 ## Methods:
+```python
+mystr.lower() # returns lowercase string
+mystr.upper() # returns uppercase string
+mystr.title() # returns str object
+mystr.capitalize() # returns a new string 
+mystr.strip() # returns a new string,it Removes leading and trailing spaces
+mystr.replace("old_substring","new_substring",count) # returns a new string, count(optional)
+mystr.split(separator) #  returns a list of substrings separators(optional)
+mystr.find("",startindex,endindex) # startindex,endindex (optional) return index value or -1
+mystr.index("",startindex,endindex) # return index of first occurrence 
+mystr.count("") # returns an integer
+mystr.startswith()/endswith() #  
+" ".join(words) # returns a new single string
+mystr[index] # return character at that index | **Accessing character**
+mystr[start:stop:step] # return substring | Slicing | mystr[::]->create shallow copy
+
+```
 - `+` :
-- `separator.join(iterable)` : returns a new single string
 - `insert(index,element)`:  modifies the list in-place and returns None
 - `String Slicing a[::]` :returns a new sequence and, mylist[:]->creates a shallow copy of the entire list slicing
 - `.copy()` : returns a shallow copy independent object at the top level 
 - `Accessing characters mystr[index]` : return value
-- `find("",startindex,endindex)` : startindex,endindex (optional) return index value 
-- `.index(elements,startindex,endindex)` : return index of first occurrence
 - `.update()` : return None, used with dictionaries and sets to add items
-- `.replace(old_substring,new_substring,count)` : By default replace all the occurrance with new_substring and returns a new string, count(optional)
 - `.reverse()` : Returns None syntax: my_list.reverse()
 - `.remove(value)` : returns None, remove the first occurring value matching the given parameter from list in place modifies 
 - `del a[index]` : Removes the item at index in-place return None
 - `.clear()` : return None syntax : MyList.clear()
-- `startswith()/endswith()` :
-- `title()` : return str object
-- `count()` : returns an integer
 - `isalpha()` : check and return (True or False)
-- `strip()` : returns a new string
 - `len(iterable)` : always returns an integer value=
 - `f-strings` : string literals f"My name is {name},I live in {city}"
 - `in keyword`: check and return (True or False)
