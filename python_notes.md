@@ -92,17 +92,15 @@ Ans : sequence of character , immutable , represent by 'string',"string","""stri
 - `+` :
 - `separator.join(iterable)` : returns a new single string
 - `insert(index,element)`:  modifies the list in-place and returns None
-- `String Slicing a[::]` : mylist[:]->creates a shallow copy of the entire list slicing,returns a new sequence
+- `String Slicing a[::]` :returns a new sequence and, mylist[:]->creates a shallow copy of the entire list slicing
 - `.copy()` : returns a shallow copy independent object at the top level 
 - `Accessing characters mystr[index]` : return value
-- `find("",startindex,endindex)` : startindex,endindex optional return index value 
-- `.index()` : return indexof first occurrence For data structures other than strings
+- `find("",startindex,endindex)` : startindex,endindex (optional) return index value 
+- `.index(elements,startindex,endindex)` : return index of first occurrence
 - `.update()` : return None, used with dictionaries and sets to add items
-- `.replace(old_substring,new_substring,count)` : count optional, by default replace all the occurrance returns a new string
+- `.replace(old_substring,new_substring,count)` : By default replace all the occurrance with new_substring and returns a new string, count(optional)
 - `.reverse()` : Returns None syntax: my_list.reverse()
-- `.remove(value)` : remove the first occurring value matching the given parameter from list in place modifies return updated list
-- `.pop(index)` : -> list method
-- `.push(index)` : -> list method
+- `.remove(value)` : returns None, remove the first occurring value matching the given parameter from list in place modifies 
 - `del a[index]` : Removes the item at index in-place return None
 - `.clear()` : return None syntax : MyList.clear()
 - `startswith()/endswith()` :
@@ -127,11 +125,11 @@ Ans : list is a ``mutable & Ordered`` data structure stores mixed datatypes(int,
 ```
 ### Methods 
 ```Python
-     mylist.append(element) #
+     mylist.append(element) # return None add element at the end
      mylist.extend(iterable) # merge two list retu
      mylist.insert(index,element) #
      mylist.remove(element) #
-     mylist.pop() #
+     mylist.pop() # returns that removed item
      mylist.sort(key=None, reverse=False) #
      mylist.reverse() #
      mylist.copy() #

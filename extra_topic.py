@@ -156,4 +156,19 @@ original_string.title()
 
 numbers = [1, 5, 3, 5, 7, 9, 5, 2, 5]
 count_of_5 = numbers.count(5)
+
+fruits = ['apple', 'banana', 'cherry', 'banana']
+
+# Using remove() - returns None
+return_value_remove = fruits.remove('banana')
+print(f"List after remove: {fruits}")
+print(f"Return value of remove(): {return_value_remove}")
+
+my_list = ['apple', 'banana']
+new_item = 'cherry'
+
+# Append the new item
+a = my_list.append(new_item)
+print(f"Updated list: {my_list}")
+print(a)
  
