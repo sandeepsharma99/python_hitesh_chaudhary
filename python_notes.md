@@ -91,10 +91,10 @@ Ans : sequence of character , immutable , represent by 'string',"string","""stri
 ## Methods:
 - `+` :
 - `separator.join(iterable)` : returns a new single string
-- `insert(index,element)`:
-- `String Slicing-[::]` :
-- `.copy()` :
-- `Accessing characters mystr[index]` :
+- `insert(index,element)`:  modifies the list in-place and returns None
+- `String Slicing a[::]` : mylist[:]->creates a shallow copy of the entire list slicing,returns a new sequence
+- `.copy()` : returns a shallow copy independent object at the top level 
+- `Accessing characters mystr[index]` : return value
 - `find("",startindex,endindex)` : startindex,endindex optional return index value 
 - `.index()` : return indexof first occurrence For data structures other than strings
 - `.update()` : return None, used with dictionaries and sets to add items
@@ -103,16 +103,16 @@ Ans : sequence of character , immutable , represent by 'string',"string","""stri
 - `.remove(value)` : remove the first occurring value matching the given parameter from list in place modifies return updated list
 - `.pop(index)` : -> list method
 - `.push(index)` : -> list method
-- `del a[index]` : 
+- `del a[index]` : Removes the item at index in-place return None
 - `.clear()` : return None syntax : MyList.clear()
 - `startswith()/endswith()` :
-- `title()` : 
-- `count()` :
-- `isalpha()` :
+- `title()` : return str object
+- `count()` : returns an integer
+- `isalpha()` : check and return (True or False)
 - `strip()` : returns a new string
 - `len(iterable)` : always returns an integer value=
 - `f-strings` : string literals f"My name is {name},I live in {city}"
-- `in keyword`: 
+- `in keyword`: check and return (True or False)
 
 # Q: How can you print a string without resolving escape sequences in Python?
 ans : In python repr() function ensure that the escape sequences are displayed as part of the string rather than being processed.

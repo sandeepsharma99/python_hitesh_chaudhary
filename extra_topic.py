@@ -148,3 +148,12 @@ print(f"x is y: {x is y}")
 
 # x and z refer to different objects, so their IDs are different
 print(f"x is z: {x is z}")
+
+original_string = "tHIs is a samPle StrING for PYTHON's title() method"
+
+# Call the title() method and store the returned string
+original_string.title()
+
+numbers = [1, 5, 3, 5, 7, 9, 5, 2, 5]
+count_of_5 = numbers.count(5)
+ 
