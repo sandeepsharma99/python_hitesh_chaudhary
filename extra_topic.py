@@ -171,4 +171,3 @@ new_item = 'cherry'
 a = my_list.append(new_item)
 print(f"Updated list: {my_list}")
 print(a)
- 

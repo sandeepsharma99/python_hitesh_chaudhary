@@ -89,39 +89,41 @@ print(type(data))
 # Q: String and method " "
 Ans : sequence of character , immutable , represent by 'string',"string","""string"""
 ```python
-mystr = "  Python Programming 123  "
+mystr = "  Python Programming 123  " # creating a string
 ```
 ## Methods:
+**Accessing character**
 ```python
 mystr.lower() # returns lowercase string
 mystr.upper() # returns uppercase string
 mystr.title() # returns str object
 mystr.capitalize() # returns a new string 
+"Python".isalpha() # check and return (True or False)
 mystr.strip() # returns a new string,it Removes leading and trailing spaces
 mystr.replace("old_substring","new_substring",count) # returns a new string, count(optional)
-mystr.split(separator) #  returns a list of substrings separators(optional)
+mystr.split(separator) #  returns a list of substrings separators(optional) | Convert string to a list
 mystr.find("",startindex,endindex) # startindex,endindex (optional) return index value or -1
 mystr.index("",startindex,endindex) # return index of first occurrence 
 mystr.count("") # returns an integer
-mystr.startswith()/endswith() #  
+len(mystr) # returns the total number of characters
+mystr.startswith()/endswith() #  return True or False
 " ".join(words) # returns a new single string
 mystr[index] # return character at that index | **Accessing character**
-mystr[start:stop:step] # return substring | Slicing | mystr[::]->create shallow copy
-
+mystr[start:stop:step] # return a new substring | Slicing | mystr[::]->create shallow copy
+for char in s:  # iteration
+    print(char)
+f-strings 
+repr(),raw strings(r '')
 ```
 - `+` :
 - `insert(index,element)`:  modifies the list in-place and returns None
-- `String Slicing a[::]` :returns a new sequence and, mylist[:]->creates a shallow copy of the entire list slicing
 - `.copy()` : returns a shallow copy independent object at the top level 
-- `Accessing characters mystr[index]` : return value
 - `.update()` : return None, used with dictionaries and sets to add items
 - `.reverse()` : Returns None syntax: my_list.reverse()
 - `.remove(value)` : returns None, remove the first occurring value matching the given parameter from list in place modifies 
 - `del a[index]` : Removes the item at index in-place return None
 - `.clear()` : return None syntax : MyList.clear()
-- `isalpha()` : check and return (True or False)
-- `len(iterable)` : always returns an integer value=
-- `f-strings` : string literals f"My name is {name},I live in {city}"
+- `f-strings` : string literals f"My name is {name},I live in {city}" used to embed variables
 - `in keyword`: check and return (True or False)
 
 # Q: How can you print a string without resolving escape sequences in Python?
