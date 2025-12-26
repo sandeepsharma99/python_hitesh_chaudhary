@@ -171,3 +171,12 @@ new_item = 'cherry'
 a = my_list.append(new_item)
 print(f"Updated list: {my_list}")
 print(a)
+
+
+with open("practice.txt","r+") as f:
+    data = f.read()
+
+new_data = data.replace("java", "python")
+    
+with open("practice.txt","w") as f:
+    f.write(new_data)

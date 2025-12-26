@@ -18,7 +18,12 @@ now = datetime.datetime.now()
 ```
 
 # Q: DataType ?
-- Python has several built-in data types to classify values/information, which represent what kind of value is stored and what operation can be performed on the data. 
+- Python has several built-in data types to cl
+
+
+
+
+assify values/information, which represent what kind of value is stored and what operation can be performed on the data. 
 There are following `7` categories: Numeric, Sequence , Mapping, Set, Boolean, NoneType and Binary Types. 
 
 1. Numeric : int, float(decimals), complex
@@ -52,7 +57,15 @@ Check for More : check if ``next()` raises StopIteration
 - inside class you typically define attributes and methods
 - The class definition doesn't take up memory until objects are created from it, but each object does.  
 ### object  : object is the real instanc of that blueprint/template
-- To create an object we simply call class like function, and pass the argument require by `__init__()`
+- To create an object we simply call class like function, and pass the argument require by `def __init__(self,a,b):`
+
+### constructor : all the class have a function  called def __init__(self,a,b):, which is always executed when the obj is being initiated
+
+### self : self is a reference of current instance of class(object), and is used to acces the variable that belongs to the class
+
+### Abstraction : Hiding the implementation details of class and showing the essential feature to the user.
+
+### Encapsulation : wrapping data and function into a single unit(object)
 
 # Q: Map ,filter ,reduce
 - map: Applies a function to every item in an iterable. return a map object (an iterator), to see result you must convert explicitly into list(filter(func,iterable)).
@@ -71,6 +84,70 @@ Imagine this situation:
 Project A needs Django 3.2
 Project B needs Django 5.0
 If both are installed globally ❌ → version conflict
+
+# Q: what is File I/O in python ?
+ans : python can be used to perform operation(read & write) on a file.
+text file : .txt,, .doc,.log etc
+binary file :.mp4, .jpg, .jpeg etc
+#### open ,read and closeFile
+``
+f= open ("file_name", "r/w")
+    f.read()
+    f.close()
+``
+- r : reading only
+- w : overwrites existing file (after truncation)
+- a : add data at the end
+- r+ : reading and writing Pointer starts at beginning
+- w+ : Overwrites existing content after truncate
+![My Image](./image/Screenshot%202025-12-26%20175505.png)
+
+# Q : create a new file "practice.txt" using python. add the following data 
+`hi everyone
+we 'r learning File i/o
+using java
+i like programming in  jave
+
+1. replace all occurance of "java" with "python"
+2. search if the "learning exist or not"
+3. WAF to find  in which line of the file does the word "learning" exist, print -1 if not found.
+4. from  a file containing number separeated by comma, print the count of the even numbers.
+` 
+```python
+with open("practice.txt","r") as f:
+    data = f.read()
+
+new_data = data.replace("java", "python")
+    
+with open("practice.txt","w") as f:
+    f.write(new_data)
+```
+```python
+def check_word:
+    with open("practice.txt","r") as f:
+        word = "learning"
+        if("learning" in f):
+            print("found")
+        else:
+            print("not found")
+
+check_word()
+```
+```python
+def check_word_inlin-no:
+    with open("practice.txt","r") as f:
+        data = True
+        line-no =1
+        data = f.readline()
+        if(data in word):
+            print(line-no)
+            return
+            line-no += 1
+    return -1
+
+print(check_word_inlin-no())
+        
+```
 
 # Q: how do you read and write json data ?
 ans: In Python, the built-in json module is used to work with JSON data, primarily using the     `.load` functions for reading and `.dump` functions for writing
@@ -111,10 +188,11 @@ mystr.startswith()/endswith() #  return True or False
 mystr[index] # return character at that index | **Accessing character**
 mystr[start:stop:step] # return a new substring | Slicing | mystr[::]->create shallow copy
 for char in s:  # iteration
-    print(char)
-f-strings 
+    print(char) 
 repr(),raw strings(r '')
 ```
+- `f-strings` : string literals f"My name is {name},I live in {city}" used to embed variables
+
 - `+` :
 - `insert(index,element)`:  modifies the list in-place and returns None
 - `.copy()` : returns a shallow copy independent object at the top level 
@@ -123,7 +201,6 @@ repr(),raw strings(r '')
 - `.remove(value)` : returns None, remove the first occurring value matching the given parameter from list in place modifies 
 - `del a[index]` : Removes the item at index in-place return None
 - `.clear()` : return None syntax : MyList.clear()
-- `f-strings` : string literals f"My name is {name},I live in {city}" used to embed variables
 - `in keyword`: check and return (True or False)
 
 # Q: How can you print a string without resolving escape sequences in Python?
