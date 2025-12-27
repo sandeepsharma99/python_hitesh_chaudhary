@@ -18,13 +18,8 @@ now = datetime.datetime.now()
 ```
 
 # Q: DataType ?
-- Python has several built-in data types to cl
-
-
-
-
-assify values/information, which represent what kind of value is stored and what operation can be performed on the data. 
-There are following `7` categories: Numeric, Sequence , Mapping, Set, Boolean, NoneType and Binary Types. 
+- Python has several built-in data types to classify values/information, which represent what kind of value is stored and what operation can be performed on the data. 
+There are `7` categories: Numeric, Sequence , Mapping, Set, Boolean, NoneType and Binary Types. 
 
 1. Numeric : int, float(decimals), complex
 2. Sequence : string("", immutable sequence of character) ,list , tuple
@@ -189,7 +184,7 @@ mystr[index] # return character at that index | **Accessing character**
 mystr[start:stop:step] # return a new substring | Slicing | mystr[::]->create shallow copy
 for char in s:  # iteration
     print(char) 
-repr(),raw strings(r '')
+repr(),raw strings(r '') # Developer-friendly representation of string/output showing with escape sequence
 ```
 - `f-strings` : string literals f"My name is {name},I live in {city}" used to embed variables
 
