@@ -385,7 +385,7 @@ int_list = [1, 2, 3, 4, 5]
 single_integer = int("".join(map(str, int_list))) # str is keyword which is used to typecasting str(--)
 print(single_integer)
 ```
-# Q:
+# Q: what is args and kwargs ?
 # Q:
 # Q:
 # Q:
