@@ -171,3 +171,11 @@ new_item = 'cherry'
 a = my_list.append(new_item)
 print(f"Updated list: {my_list}")
 print(a)
+
+
+mylsit = [1,2,2,54,5]
+ele = mylsit[2]
+print(ele)
+
+mytup = (1,2,2,3,4,2)
+print(mytup.count(2))

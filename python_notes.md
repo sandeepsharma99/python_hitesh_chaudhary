@@ -205,14 +205,16 @@ Ans : list is a ``mutable & Ordered`` data structure stores mixed datatypes(int,
 ```
 ### Methods 
 ```Python
-     mylist.append(element) # return None add element at the end
-     mylist.extend(iterable) # merge two list retu
-     mylist.insert(index,element) #
-     mylist.remove(element) #
-     mylist.pop() # returns that removed item
-     mylist.sort(key=None, reverse=False) #
-     mylist.reverse() #
-     mylist.copy() #
+    mylist[index] # return none give the element at specified index.
+    mylist.append(element) # return None add element at the end
+    mylist.extend(iterable) # merge two list retu
+    mylist.insert(index,element) # returns None insert element into mylist at the specified index
+    mylist.remove(element) # returns None  remove the first occurrence of a specified element by value
+    del mylist[index] # return None in-place modified the list
+    mylist.pop() # returns that removed item
+    mylist.sort(key=None, reverse=False) # returns None sorts the list in-place in ascending order
+    mylist.reverse() # returns None | alterante : mylist[::-1]
+    mylist.copy() # returns a shallow copy, independent list
 ```
 # Q: what is List comprehension
 Ans : 
@@ -220,6 +222,30 @@ Ans :
 - Alternative of for loop or func like map() & filter()
 - basic syntax is enclose in square bracket ?
 `even_no = [x for x in range(10) if x%2==0] `
+
+# Q: What is tuple
+Ans: Tuple is an ordered and immutable collection of elements
+- heterogeneous: tuple can contain elements of different data types (strings, integers, floats, lists, etc.)
+- they are hashable 
+- Allows Duplicates
+```python
+    mytup = (1,2,3,4,5,6,7)
+```
+### Method
+```python
+    mytup.index(ele) # return none gives the value at specified index
+    mytup[0] # accessing value
+    mytup.count(10) # return integer
+    mytup[1:4]
+    a, b, c = tup # This line unpack values of Tuple
+    tup3 = tup1 + tup2 # concatenation/merging
+    del mytup
+```
+
+# What is packing and upacking(*) ?
+Ans: Handle unknown-length data, It allows unpacking variable-length iterables
+- * captures multiple values into a list while assigning remaining values normally
+- Multiple starred expressions are not allowed `a, *b, *c = tup`
 
 # Q: what is set {}?
 Ans : set is an mutable,unordered collection of unique item.
@@ -266,15 +292,14 @@ print(f"The dictionary view object: {dict_items_view}")
     mydict.keys() # return a view object that displays a list of all the keys
     mydict.values() # returns a view object that contains all the values in the dictionary.
     mydict.items() # return a view object, list of tuples as item in the format (key, value)
-    mydict.setdefault("gender", "Male") #
-    mydict.setdefault("age", 25) #
+    mydict.setdefault(key,defaultvalue) # returns that value if exist if not return default value. 
     mydict.update({"age": 22, "country": "India"}) # return None it modifies the original  
-    mydict.pop("city")
-    len(mydict)
-    mydict.popitem()
+    mydict.pop("city") # removes and returns the value
+    len(mydict) 
+    mydict.popitem() #  returns a tuple containing the (key, value) pair of the removed item.
     mydict.copy()
     keys = ["a", "b", "c"]
-    new_dict = dict.fromkeys(keys, 0)
+    new_dict = dict.fromkeys(keys, 0) # creating new dict with default value
     mydict.clear()
 ```
 - merge: using .update(), union operator, **unpacing
