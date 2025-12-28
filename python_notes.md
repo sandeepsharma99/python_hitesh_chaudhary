@@ -228,8 +228,21 @@ Ans :
 `even_no = [x for x in range(10) if x%2==0] `
 
 # Q: what is set {}?
-Ans : set is an mutable,unordered collection of unique.
-    ex :`s = {10, 50, 20}`
+Ans : set is an mutable,unordered collection of unique item.
+    ex :`myset = {"sandeep",10, (1,2,3,4), True}`
+- set store immutable element(string, int, float, boolean, tuple) except mutable element(list and dict)
+- Internally use hashing
+### methods
+```python
+    myset.add()
+    myset.pop()
+    myset.update()
+    myset.union()
+    myset.intersection()
+    myset.difference()
+    myset.clear()
+
+```
 
 # Q: Dictionary and method {}
 ans : In Python Dictionary is a ``mutable & Ordered`` collection of mix data and it store data as unique key-value pairs, can store nested dictionary
@@ -260,7 +273,7 @@ print(f"The dictionary view object: {dict_items_view}")
     mydict.items() # return a view object, list of tuples as item in the format (key, value)
     mydict.setdefault("gender", "Male") #
     mydict.setdefault("age", 25) #
-    update({"age": 22, "country": "India"}) #
+    mydict.update({"age": 22, "country": "India"}) # return None it modifies the original  
     mydict.pop("city")
     len(mydict)
     mydict.popitem()
