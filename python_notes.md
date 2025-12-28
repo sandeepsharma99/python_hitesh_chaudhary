@@ -168,13 +168,13 @@ mystr = "  Python Programming 123  " # creating a string
 ```python
 mystr.lower() # returns lowercase string
 mystr.upper() # returns uppercase string
-mystr.title() # returns str object
-mystr.capitalize() # returns a new string 
+mystr.title() # returns str object capitalizes the first letter of each word 
+mystr.capitalize() # returns a new string converts the first character of a string to uppercase
 "Python".isalpha() # check and return (True or False)
-mystr.strip() # returns a new string,it Removes leading and trailing spaces
-mystr.replace("old_substring","new_substring",count) # returns a new string, count(optional)
 mystr.split(separator) #  returns a list of substrings separators(optional) | Convert string to a list
-mystr.find("",startindex,endindex) # startindex,endindex (optional) return index value or -1
+mystr.strip() # returns a new string,it Removes leading and trailing spaces
+mystr.replace("old_substring","new_substring",count) # returns a new string, replace all occurrences of old_substring are replaced by new_substring count(optional)
+mystr.find("",startindex,endindex) # return index value or -1. startindex,endindex (optional) 
 mystr.index("",startindex,endindex) # return index of first occurrence 
 mystr.count("") # returns an integer
 len(mystr) # returns the total number of characters
@@ -199,7 +199,7 @@ Example:string = "Hello\nWorld\t!"
 print(repr(string))  # Output: 'Hello\nWorld\t!'
 
 # Q: List and its method []
-Ans : list is a ``mutable & Ordered`` data structure stores mixed datatypes(int, str, bool, and even other lists). it can contain duplicate items 
+Ans : list is a ``mutable & Ordered`` collection of mixed datatypes(int, str, bool, and even other lists). it can contain duplicate items 
 ```Python
     syntax : mylist = [1, 2, 3, 4, 5]
 ```
@@ -208,6 +208,7 @@ Ans : list is a ``mutable & Ordered`` data structure stores mixed datatypes(int,
     mylist[index] # return none give the element at specified index.
     mylist.append(element) # return None add element at the end
     mylist.extend(iterable) # merge two list retu
+    " ".join(iterable_of_string) # returns a single string
     mylist.insert(index,element) # returns None insert element into mylist at the specified index
     mylist.remove(element) # returns None  remove the first occurrence of a specified element by value
     del mylist[index] # return None in-place modified the list

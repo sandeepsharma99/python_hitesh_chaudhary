@@ -179,3 +179,6 @@ print(ele)
 
 mytup = (1,2,2,3,4,2)
 print(mytup.count(2))
+
+mystr = "  Python Programming 123  "
+print("".join(mystr))
