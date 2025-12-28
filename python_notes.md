@@ -224,12 +224,17 @@ Ans : list is a ``mutable & Ordered`` data structure stores mixed datatypes(int,
 Ans : 
 - list comprehension is shortahnd way to create list
 - Alternative of for loop or func like map() & filter()
-- basic syntax is enclose in square bracket 
+- basic syntax is enclose in square bracket ?
 `even_no = [x for x in range(10) if x%2==0] `
 
+# Q: what is set {}?
+Ans : set is an mutable,unordered collection of unique.
+    ex :`s = {10, 50, 20}`
+
 # Q: Dictionary and method {}
-ans : In Python Dictionary is a ``mutable & Ordered`` data structure stores data as unique key-value pairs, can store nested dictionary
+ans : In Python Dictionary is a ``mutable & Ordered`` collection of mix data and it store data as unique key-value pairs, can store nested dictionary
 - `offering fast lookups` because it uses hasing for quick access
+- key can be string ,int, float ,tuple
 - ## Hashing converts a key into a number (hash value).
 This hash value tells Python where to store and find the data in memory.
 So Python doesn’t search — it jumps directly to the location.
@@ -248,15 +253,16 @@ print(f"The dictionary view object: {dict_items_view}")
 ```
 ### Methods 
 ```Python
-    mydict.get("name") #Returns value for specified key    
+    mydict.get("key") #Returns value for specified key    
     mydict.get("salary", defaultvalue) # if the specified key does not exist return none/defaultvalue(optional)
-    mydict.keys() #
-    mydict.values() #
-    mydict.items() #
+    mydict.keys() # return a view object that displays a list of all the keys
+    mydict.values() # returns a view object that contains all the values in the dictionary.
+    mydict.items() # return a view object, list of tuples as item in the format (key, value)
     mydict.setdefault("gender", "Male") #
     mydict.setdefault("age", 25) #
     update({"age": 22, "country": "India"}) #
     mydict.pop("city")
+    len(mydict)
     mydict.popitem()
     mydict.copy()
     keys = ["a", "b", "c"]
