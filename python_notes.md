@@ -164,7 +164,6 @@ Ans : sequence of character , immutable , represent by 'string',"string","""stri
 mystr = "  Python Programming 123  " # creating a string
 ```
 ## Methods:
-**Accessing character**
 ```python
 mystr.lower() # returns lowercase string
 mystr.upper() # returns uppercase string
@@ -199,7 +198,9 @@ Example:string = "Hello\nWorld\t!"
 print(repr(string))  # Output: 'Hello\nWorld\t!'
 
 # Q: List and its method []
-Ans : list is a ``mutable & Ordered`` collection of mixed datatypes(int, str, bool, and even other lists). it can contain duplicate items 
+Ans : list is a ``mutable & Ordered`` collection of mixed datatypes(int, str, bool, and even other lists). 
+- it can contain duplicate items 
+- we can create list using square brackets with comma separated value.
 ```Python
     syntax : mylist = [1, 2, 3, 4, 5]
 ```
@@ -234,7 +235,7 @@ Ans: Tuple is an ordered and immutable collection of elements
 ```
 ### Method
 ```python
-    mytup.index(ele) # return none gives the value at specified index
+    mytup.index(ele) # return none gives the index of specified element
     mytup[0] # accessing value
     mytup.count(10) # return integer
     mytup[1:4]
@@ -244,23 +245,23 @@ Ans: Tuple is an ordered and immutable collection of elements
 ```
 
 # What is packing and upacking(*) ?
-Ans: Handle unknown-length data, It allows unpacking variable-length iterables
-- * captures multiple values into a list while assigning remaining values normally
+Ans: captures multiple values into a list while assigning remaining values normally
 - Multiple starred expressions are not allowed `a, *b, *c = tup`
 
 # Q: what is set {}?
 Ans : set is an mutable,unordered collection of unique item.
     ex :`myset = {"sandeep",10, (1,2,3,4), True}`
-- set store immutable element(string, int, float, boolean, tuple) except mutable element(list and dict)
+- set store all immutable element(string, int, float, boolean, tuple) except mutable element(list and dict)
 - Internally use hashing
 ### methods
 ```python
     myset.add(item) # returns None in-place modification
     myset.remove(item) # returns None removes element from the set if it exists
-    myset.update(iterable) #adding multiple elements from another iterable
+    myset.update(iterable) #adding multiple elements from given iterable
     myset.union(iterable) #returns a new set, You can pass one or more sets (or any other iterable, like a list or tuple) as arguments  
-    myset.intersection(iterable,...) # returns a new set with common element
-    myset.difference(set2,set3,..) # return a new set with the difference.
+    myset.intersection(iterable,...) # & returns a new set with common element
+    myset.difference(set2,set3,..) # - return a new set with the difference.
+    set1.symmetric_difference(set2) # ^ return a new set that contains all elements present in exactly one of the sets, but not in their shared intersection
     myset.clear() # returns None make set empty. 
     myset.copy() # returns a shallow copy, independent set
 
@@ -292,16 +293,16 @@ print(f"The dictionary view object: {dict_items_view}")
     mydict.get("salary", defaultvalue) # if the specified key does not exist return none/defaultvalue(optional)
     mydict.keys() # return a view object that displays a list of all the keys
     mydict.values() # returns a view object that contains all the values in the dictionary.
-    mydict.items() # return a view object, list of tuples as item in the format (key, value)
-    mydict.setdefault(key,defaultvalue) # returns that value if exist if not return default value. 
+    mydict.items() # return a view object, list of tuples as item in the format of (key, value)
+    mydict.setdefault(key,defaultvalue) # returns that value. if key exist if not inserts the key into the dictionary with the specified default value and return default value. 
     mydict.update({"age": 22, "country": "India"}) # return None it modifies the original  
     mydict.pop("city") # removes and returns the value
     len(mydict) 
-    mydict.popitem() #  returns a tuple containing the (key, value) pair of the removed item.
-    mydict.copy()
+    mydict.popitem() # returns a tuple containing the (key, value) pair of the removedlast item.
+    mydict.copy() # return a shallow copy
     keys = ["a", "b", "c"]
     new_dict = dict.fromkeys(keys, 0) # creating new dict with default value
-    mydict.clear()
+    mydict.clear() # return None an empty dictionary
 ```
 - merge: using .update(), union operator, **unpacing
 - mydict.items(): return view object
@@ -426,12 +427,75 @@ single_integer = int("".join(map(str, int_list))) # str is keyword which is used
 print(single_integer)
 ```
 # Q: what is args and kwargs ?
-# Q:
-# Q:
+Ans : 
+### args((Arbitrary Positional Arguments))
+Purpose: To pass a variable number of non-keyworded (positional) arguments.
+How it works: Collects all extra positional arguments into a tuple
+```Python
+    def sum_all(*args): # 'args' collects all positional inputs
+    total = 0
+    for num in args:
+        total += num
+    return total
+
+print(sum_all(10, 20, 30, 40)) # Output: 100
+```
+### kwargs(Arbitrary Keyword Arguments)
+Purpose: To pass a variable number of keyworded (named) arguments.
+How it works: Collects all extra keyword arguments into a dictionary.
+```Python
+    def display_info(**kwargs): # 'kwargs' collects all keyword inputs
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+display_info(name="Bob", city="New York", job="Engineer")
+# Output:
+# name: Bob
+# city: New York
+# job: Engineer
+
+```
+
+### Packing Arguments in Function Definitions (**kwargs) 
+When defining a function, placing ** before a parameter name (conventionally **kwargs) allows the function to accept any number of named (keyword) arguments. These arguments are then collected into a dictionary inside the function. 
+```Python
+    def print_details(**kwargs):
+    print("Received dictionary:", kwargs)
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+# Call the function with arbitrary keyword arguments
+print_details(name="John", age=30, city="New York")
+# Output:
+# Received dictionary: {'name': 'John', 'age': 30, 'city': 'New York'}
+# name: John
+# age: 30
+# city: New York 
+```
+### Unpacking Dictionaries in Function Calls
+When calling a function, ** can be used to unpack a dictionary and pass its key-value pairs as keyword arguments to the function. This is useful when the function expects specific named arguments.
+```Python
+    def intro(name, age, city):
+    print(f"My name is {name}, I'm {age} years old and I live in {city}.")
+
+user_data = {"name": "Jane", "age": 25, "city": "London"}
+
+# Unpack the dictionary to pass arguments
+intro(**user_data)
+# Output: My name is Jane, I'm 25 years old and I live in London.
+```
+# Q: What is a lambda function in Python?
+Ans: A lambda function is a small anonymous function defined using the lambda keyword. It can have any number of arguments but only one expression.
+```Python
+add = lambda x, y: x + y # Lambda function to add two numbers
+print(add(3, 5))
+```
+# Q: what is pass continue and break
 # Q:
 # Q:
 ```Python
 
 ```
+
 
 
