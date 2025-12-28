@@ -189,13 +189,7 @@ repr(),raw strings(r '') # Developer-friendly representation of string/output sh
 - `f-strings` : string literals f"My name is {name},I live in {city}" used to embed variables
 
 - `+` :
-- `insert(index,element)`:  modifies the list in-place and returns None
-- `.copy()` : returns a shallow copy independent object at the top level 
-- `.update()` : return None, used with dictionaries and sets to add items
-- `.reverse()` : Returns None syntax: my_list.reverse()
-- `.remove(value)` : returns None, remove the first occurring value matching the given parameter from list in place modifies 
 - `del a[index]` : Removes the item at index in-place return None
-- `.clear()` : return None syntax : MyList.clear()
 - `in keyword`: check and return (True or False)
 
 # Q: How can you print a string without resolving escape sequences in Python?
@@ -240,7 +234,7 @@ Ans : set is an mutable,unordered collection of unique item.
     myset.union(iterable) #returns a new set, You can pass one or more sets (or any other iterable, like a list or tuple) as arguments  
     myset.intersection(iterable,...) # returns a new set with common element
     myset.difference(set2,set3,..) # return a new set with the difference.
-    myset.clear() # returns None 
+    myset.clear() # returns None make set empty. 
     myset.copy() # returns a shallow copy, independent set
 
 ```
