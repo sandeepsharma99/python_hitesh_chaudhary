@@ -234,13 +234,14 @@ Ans : set is an mutable,unordered collection of unique item.
 - Internally use hashing
 ### methods
 ```python
-    myset.add()
-    myset.pop()
-    myset.update()
-    myset.union()
-    myset.intersection()
+    myset.add(item) # returns None in-place modification
+    myset.remove(item) # returns None removes element from the set if it exists
+    myset.update(iterable) #adding multiple elements from another iterable
+    myset.union(iterable) #returns a new set, You can pass one or more sets (or any other iterable, like a list or tuple) as arguments  
+    myset.intersection() # returns a new set with common element
     myset.difference()
     myset.clear()
+    myset.copy()
 
 ```
 
