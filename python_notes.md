@@ -238,10 +238,10 @@ Ans : set is an mutable,unordered collection of unique item.
     myset.remove(item) # returns None removes element from the set if it exists
     myset.update(iterable) #adding multiple elements from another iterable
     myset.union(iterable) #returns a new set, You can pass one or more sets (or any other iterable, like a list or tuple) as arguments  
-    myset.intersection() # returns a new set with common element
-    myset.difference()
-    myset.clear()
-    myset.copy()
+    myset.intersection(iterable,...) # returns a new set with common element
+    myset.difference(set2,set3,..) # return a new set with the difference.
+    myset.clear() # returns None 
+    myset.copy() # returns a shallow copy, independent set
 
 ```
 
