@@ -494,6 +494,7 @@ print(even_numbers) # Output: [2, 4, 6]
 
 ```
 # Q: what is pass continue and break
+
 # Q: what is oop ?
 Ans To map with real world scenarios ,we start using object in code. This is object oriented programming
 - constructor : In Python, a constructor is a special method that is called automatically when an new object is created from a class  and its main purpose is to initialize the object's attributes with starting values.  
