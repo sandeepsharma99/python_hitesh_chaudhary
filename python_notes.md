@@ -495,13 +495,17 @@ print(even_numbers) # Output: [2, 4, 6]
 ```
 # Q: what is pass continue and break
 # Q: what is oop ?
-Ans To map with real world scenarios ,we start using objectin code. This is object oriented programming
-- constructor : defalut:It executes automatically when object is created and parameterized 
-- self :
-- Attributes : class and object attribute   obj att > class att
-- Methods(Function) : 
-- Static Methods(class level)
-- Decorators :  
+Ans To map with real world scenarios ,we start using object in code. This is object oriented programming
+- constructor : In Python, a constructor is a special method that is called automatically when an new object is created from a class  and its main purpose is to initialize the object's attributes with starting values.  
+defalut:It executes automatically when object is created with no parameters 
+parameterized : A parameterized constructor accepts arguments to initialize the object's attributes with specific values.
+- self :  is a reference to the current instance of a class and is used to access the instance's attributes and methods it is the first mandatory parameter for any instance method within a class definition.  
+- Attributes : variable/values/data/properties/
+class attributes : Defined directly within the class body, but outside any __init__ or other methods.
+object attribute : Defined within methods (most commonly in the __init__ method) using self.<attribute_name>.  obj att > class att
+- Methods(Function) : simply function is called method
+- Static Methods(class level) : A static method is a function that belongs to a class's namespace but does not require access to instance-specific data
+- Decorators : decorator is a function (or class) that modifies or extends the behavior of another function, method, or class without changing its actual source code 
 - Absraction :Hiding the implementaion of a class and only showing the essential feature to the user.
 - Encapsulation : Wrapping data and function into a single unit(object)
 
