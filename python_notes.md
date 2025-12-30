@@ -208,7 +208,7 @@ Ans : list is a ``mutable & Ordered`` collection of mixed datatypes(int, str, bo
 ```Python
     mylist[index] # return none give the element at specified index.
     mylist.append(element) # return None add element at the end
-    mylist.extend(iterable) # merge two list retu
+    mylist.extend(iterable) # return None merge two list Adds each element from an iterable separately
     " ".join(iterable_of_string) # returns a single string
     mylist.insert(index,element) # returns None insert element into mylist at the specified index
     mylist.remove(element) # returns None  remove the first occurrence of a specified element by value
@@ -294,7 +294,7 @@ print(f"The dictionary view object: {dict_items_view}")
     mydict.keys() # return a view object that displays a list of all the keys
     mydict.values() # returns a view object that contains all the values in the dictionary.
     mydict.items() # return a view object, list of tuples as item in the format of (key, value)
-    mydict.setdefault(key,defaultvalue) # returns that value. if key exist if not inserts the key into the dictionary with the specified default value and return default value. 
+    mydict.setdefault(key,defaultvalue) # returns that value. if key exist, if not .inserts the key into the dictionary with the specified default value and return default value. 
     mydict.update({"age": 22, "country": "India"}) # return None it modifies the original  
     mydict.pop("city") # removes and returns the value
     len(mydict) 
@@ -486,12 +486,19 @@ intro(**user_data)
 ```
 # Q: What is a lambda function in Python?
 Ans: A lambda function is a small anonymous function defined using the lambda keyword. It can have any number of arguments but only one expression.
+- Lambda functions are typically used when you need a simple function temporarily, especially as an argument to a higher-order function such as map(), filter()
 ```Python
-add = lambda x, y: x + y # Lambda function to add two numbers
-print(add(3, 5))
+numbers = [1, 2, 3, 4, 5, 6]
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+print(even_numbers) # Output: [2, 4, 6]
+
 ```
 # Q: what is pass continue and break
-# Q:
+# Q: what is oop ?
+Ans To map with real world scenarios ,we start using objectin code. This is object oriented programming
+- constructor : 
+- self :
+
 # Q:
 ```Python
 
