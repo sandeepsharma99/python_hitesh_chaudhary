@@ -496,8 +496,14 @@ print(even_numbers) # Output: [2, 4, 6]
 # Q: what is pass continue and break
 # Q: what is oop ?
 Ans To map with real world scenarios ,we start using objectin code. This is object oriented programming
-- constructor : 
+- constructor : defalut:It executes automatically when object is created and parameterized 
 - self :
+- Attributes : class and object attribute   obj att > class att
+- Methods(Function) : 
+- Static Methods(class level)
+- Decorators :  
+- Absraction :Hiding the implementaion of a class and only showing the essential feature to the user.
+- Encapsulation : Wrapping data and function into a single unit(object)
 
 # Q:
 ```Python

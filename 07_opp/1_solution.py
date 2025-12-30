@@ -1,20 +1,52 @@
 class student :
     
-    # Default constructor 
-    def __init__(self):
+    # Default constructor :Automatic Generation with no argumnet 
+    # def __init__(self):
+    #     print("This is constructor invoke automatically when an object is created whether we write or not")
 
-        # print("This is constructor invoke automatically when an object is created")
     # Parameterized constructor
-    def __init__(self,name,age,city):
+    def __init__(self,name,age,city,marks):
         self.name = name,
         self.age = age,
         self.city = city
+        self.marks = marks
         # print(self)
+    
+    def avg(self):
+        sum = 0
+        for val in self.marks:
+            sum += val
+        return sum/len(self.marks)
         
 
-s1 = student("sandeep", 26, "Noida")
-s2 = student("mandeep", 20, "Mumbai")
-print(s2.name,s2.age,s2.city)
+s1 = student("sandeep", 26, "Noida",[94,92,95])
+# s2 = student("mandeep", 20, "Mumbai")
+# print(s2.name,s2.age,s2.city)
+
+# print(s1.avg())
+s1.name = "mandeep"
+# print(s1.name) # attributes manipulation
+
+class Account:
+    def __init__(self,balance,account_no):
+        self.balance = balance
+        self.account_no = account_no
+        print("balance : ",self.balance)
+        print("account_no : ",self.account_no)
+
+    def debit(self,debit_amt):
+        self.balance -= debit_amt
+        print(f"balance after {debit_amt} debit : ",self.balance)
+    
+    def credit(self,credit_amt):
+        self.balance += credit_amt
+        print(f"balance after {credit_amt} credit : ",self.balance)
+
+
+
+acc1 = Account(1000,852369)
+acc1.debit(500)
+acc1.credit(2000)
 
 # constructor : __init__()
 
