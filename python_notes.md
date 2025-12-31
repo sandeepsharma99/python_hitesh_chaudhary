@@ -509,7 +509,14 @@ object attribute : Defined within methods (most commonly in the __init__ method)
 - Decorators : decorator is a function (or class) that modifies or extends the behavior of another function, method, or class without changing its actual source code 
 - Absraction :Hiding the implementaion of a class and only showing the essential feature to the user.
 - Encapsulation : Wrapping data and function into a single unit(object)
--Private(like) Attribute & Methods : Private attribute and method are meant to be use only within the class and are not accessable by object.
+- Private(like) Attribute & Methods : Private attribute and method are meant to be use only within the class and are not accessable by object.
+- Inheritance :
+- multilevel inheritance : 
+- super() :
+- @classmethod :
+- property : we use @property decorator on any method in class to use method as a property
+
+## Polymorphism : operator Ocerloading
 
 # Q:
 ```Python

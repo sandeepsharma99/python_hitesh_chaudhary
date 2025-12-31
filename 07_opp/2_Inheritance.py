@@ -104,3 +104,38 @@ print(car1.type)
 
 # Super () Method is used to acces the attributes of parent class.
 
+# Class Method : a class Method is boundto the class and receive the class as an implicit first argument
+# Note - Static Method can't acccess or modify class state & generally for utility 
+
+# class person:
+#     name = "anonymous"
+
+#     # def changeName(self,name):
+#         # person.name = name  # way 1. accessing class attribute for overwrite 
+#         # self.__class__.name = name # way 2
+
+#     @classmethod  # creates class instance  # way 3
+#     def changeName(cls,name):
+#         cls.name = name
+
+# p1 = person()
+# print(p1.changeName("sandeep"))
+# print(p1.name)
+# print(person.name)
+
+class Student:
+
+    def __init__(self,math,phy,chem):
+        self.math = math
+        self.phy = phy
+        self.chem = chem
+    
+    @property
+    def percentage(self):
+        return str((self.math+self.phy+self.chem)/3) +" %"
+
+stu1 = Student(92,92,93)
+print(stu1.percentage)
+stu1.chem = 86
+print(stu1.chem)
+print(stu1.percentage)
