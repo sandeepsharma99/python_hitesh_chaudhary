@@ -48,6 +48,19 @@ acc1 = Account(1000,852369)
 acc1.debit(500)
 acc1.credit(2000)
 
+# Private attributes
+
+class user:
+    def __init__(self, acc_no, password):
+        self.acc_no = acc_no,
+        self.__password = password
+
+    def showPassword(self):
+        print(self.__password)
+
+user1 = user(921563,"sandeep")
+print(user1.showPassword())
+
 # constructor : __init__()
 
 
