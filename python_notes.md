@@ -499,6 +499,18 @@ print(even_numbers) # Output: [2, 4, 6]
 Ans To map with real world scenarios ,we start using object in code. This is object oriented programming
 - constructor : In Python, a constructor is a special method that is called automatically when an new object is created from a class  and its main purpose is to initialize the object's attributes with starting values.  
 defalut:It executes automatically when object is created with no parameters 
+```python
+# Default constructor :Automatic Generation with no argumnet 
+    def __init__(self):
+        print("This is constructor invoke automatically when an object is created whether we write or not")
+
+    # Parameterized constructor
+    def __init__(self,name,age,city,marks):
+        self.name = name,
+        self.age = age,
+        self.city = city
+        self.marks = marks
+```
 parameterized : A parameterized constructor accepts arguments to initialize the object's attributes with specific values.
 - self :  is a reference to the current instance of a class and is used to access the instance's attributes and methods it is the first mandatory parameter for any instance method within a class definition.  
 - Attributes : variable/values/data/properties/
