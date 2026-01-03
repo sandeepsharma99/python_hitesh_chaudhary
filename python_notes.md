@@ -494,6 +494,9 @@ print(even_numbers) # Output: [2, 4, 6]
 
 ```
 # Q: what is pass continue and break
+Ans : Pass : is the placeholder and tell python to do nothing and move on to the next line
+* continue : Skip the iteration 
+* Break the execition at the point.
 
 # Q: what is oop ?
 Ans To map with real world scenarios ,we start using object in code. This is object oriented programming
