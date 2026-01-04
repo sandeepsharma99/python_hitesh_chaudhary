@@ -498,6 +498,8 @@ Ans : Pass : is the placeholder and tell python to do nothing and move on to the
 * continue : Skip the iteration 
 * Break the execition at the point.
 
+# Q: what is name space and variable space suits(block of code)
+# Q: Multithreading ?
 # Q: what is oop ?
 Ans To map with real world scenarios ,we start using object in code. This is object oriented programming
 - constructor : In Python, a constructor is a special method that is called automatically when an new object is created from a class  and its main purpose is to initialize the object's attributes with starting values.  
