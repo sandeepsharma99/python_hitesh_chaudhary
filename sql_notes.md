@@ -37,14 +37,19 @@ primary key ,foreign key, unique,not null ,default, check
 FK can have dublicate and null value
 it can be self-referencing.
 
-# Where clause : filters rows based on one or more conditions so your query returns (or modifies) only the records that matchs the condition.
+# Q: what is the difference between where and Having clause ?
+* Where clause : filters rows based on one or more conditions so your query returns (or modifies) only the records that matchs the condition.
+* HAVING Clause : similar to where clause applies some condition on row .it is  Used when we want to apply condition after grouping. ``` select city column_name table_name group by city having avg(marks)>80; ```
 # Limit clause : used to control the number of records returned by a query
 # ORDER BY Clause : to sort in ascending and descending order
 # GROUP BY Clause : groups the row that have same value ``` select city, count(name) from table_name group by city; ``` It is ofently used with aggregate functions (like COUNT(), SUM(), AVG(), MAX(), and MIN()) 
-# HAVING Clause : similar to where applies some condition on row .it is  Used when we want to apply condition after grouping. ``` select city column_name table_name group by city having avg(marks)>80; ```
 
-# Q: what is the difference between where and Having clause ?
-# Q: What i sthe difference between drop truncate and delete ?
+# Q: What is the difference between drop truncate and delete ?
+Ans: 
+* Delete : remove specific rows from a table based on a given condition syntax :```DELETE FROM table_name WHERE condition```
+* Drop : used to remove  completely table permanentely, its structure, and all its data from the database. suntax :``` DROP table <table_name>;```
+* Truncate :  used to remove all rows from a table efficiently, without deleting the table’s structure or schema. ``` TRUNCATE table <table_name>;```
+
 
 # operator:
 * Between : select for given Range inclusive ``` select * from table_name WHERE marks BETWEEN 80 AND 100;```
