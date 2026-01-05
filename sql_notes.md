@@ -40,6 +40,7 @@ it can be self-referencing.
 # Q: what is the difference between where and Having clause ?
 * Where clause : filters rows based on one or more conditions so your query returns (or modifies) only the records that matchs the condition.
 * HAVING Clause : similar to where clause applies some condition on row .it is  Used when we want to apply condition after grouping. ``` select city column_name table_name group by city having avg(marks)>80; ```
+
 # Limit clause : used to control the number of records returned by a query
 # ORDER BY Clause : to sort in ascending and descending order
 # GROUP BY Clause : groups the row that have same value ``` select city, count(name) from table_name group by city; ``` It is ofently used with aggregate functions (like COUNT(), SUM(), AVG(), MAX(), and MIN()) 
@@ -80,7 +81,8 @@ Ans : Aggregate fimction perform a calculation on set of value , and return a si
 # Delete query : to delete existing row
 ``` delete from table_name Where condition;```
 
-# ON update cascade, ON delete cascade  
+# ON update cascade, ON delete cascade 
+Ans : automatically update to match the new value from parent(primary key) table to child(foreign key) table  ensuring data integrity, consistency ensuring related data stays consistent by keeping related records synchronized   
 # Alter : to change the  schema of table
 
 * Add Column ``` ALTER Table table_name add column_name datatype contraint;```
@@ -88,3 +90,77 @@ Ans : Aggregate fimction perform a calculation on set of value , and return a si
 * Modify Column``` ALTER Table table_name modify column_name datatype constraint;```
 * Change Column ``` ALTER Table table_name change old_column_name new_column_name datatype constraint;```
 ``` ALTER Table table_name rename to new_Table_name;```
+
+# Sql Joins : join is used to combine row from two or more tables, based on related column between them ad pick only common or matching data/row.
+
+# INNER JOIN : combines rows from two or more tables, returning only the rows where the specified condition (usually matching values in a common column) is true in both tables, effectively showing the intersection of the data
+```sql 
+SELECT Products.ProductName, Categories.CategoryName
+FROM Products
+INNER JOIN Categories ON Products.CategoryID = Categories.CategoryID;
+```
+# OUTER JOIN :
+# left join : return all record from the left table, and the match record from the right table.
+```sql
+SELECT columns
+FROM left_table
+LEFT JOIN right_table
+ON left_table.common_column = right_table.common_column;
+```
+
+# right join : return all record from the right table, and match record from the left table
+```sql
+    SELECT *
+FROM LeftTable
+RIGHT JOIN RightTable
+ON LeftTable.CommonColumn = RightTable.CommonColumn;
+```
+# full join : return all record from both left and right table ,It is basically the combination of LEFT JOIN and RIGHT JOIN
+```sql
+    SELECT columns
+FROM table1
+FULL JOIN table2
+ON table1.column = table2.column;
+```
+# left exclusive : retrieves all records from the left table that have no matching records in the right table
+```sql
+SELECT C.CustomerName, O.OrderID
+FROM Customers C
+LEFT JOIN Orders O ON C.CustomerID = O.CustomerID
+WHERE O.CustomerID IS NULL;
+```
+
+# Right exclusive : a relational database concept used to retrieve only the records present in the right table that do not have a match in the left table
+```sql
+SELECT B.* -- Select all columns from the right table
+FROM TableA A
+RIGHT JOIN TableB B ON A.matching_column = B.matching_column
+WHERE A.matching_column IS NULL; -- Filter where there was no match in the left table
+```
+# full exclusive join :
+
+# Union :
+# union all : 
+
+# Q: what is sub query ?
+Ans : sub query or inner query or a nested query is a query within another query 
+A subquery must always be enclosed within parentheses ()
+```sql
+-- Subquery to find employees with salary greater than the average salary
+SELECT name
+FROM employees
+WHERE salary > (SELECT AVG(salary) FROM employees);
+```
+# Q: My Sql view : view is the virtual table based on the result statement. view always show up-to-date data. the database engine every recreates the view, every time user query it. Enhance Security
+
+```sql
+CREATE VIEW view_name AS
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition;
+```
+
+
+```sql
+
+```
