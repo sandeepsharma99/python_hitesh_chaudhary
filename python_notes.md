@@ -536,7 +536,10 @@ object attribute : Defined within methods (most commonly in the __init__ method)
 ## Polymorphism : operator Ocerloading
 Ans : polymorphism  is the ability of a same method, function or operator to behave differently based on the context.
 # Q: Python memory Management
+# Q: Generators:
+ A function that contains yield becomes a generator function. It returns a generator object, which is a type of iterator.
 # Q: Yield
+Ans : yield pauses the function's execution and saves its state (local variables, instruction pointer, etc.). Control is then transferred back to the caller. When the caller requests the next value (typically via a for loop or the next() function), the generator function resumes execution from where it left off, continuing until the next yield statement is encountered or the function ends
 # Q: Exception
 # Q: Name space and variable scope 
 Ans : Namespace is a system that manages all the names (identifiers for variables, functions, classes, etc.) in a program, mapping each name to its corresponding object in memory to prevent naming conflicts
