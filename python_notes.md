@@ -561,6 +561,8 @@ Global Namespace: Contains names defined at the top level of a script or a modul
 Enclosing Namespace: Exists for nested functions. It is the namespace of the outer function within which an inner function is defined.
 Local Namespace: Contains names defined inside a function or a class method. This namespace is temporary; it is created when the function is called and destroyed when the function returns. 
 
+# Q: what is PIP name 5 package and module 
+
 ```Python
 
 ```
