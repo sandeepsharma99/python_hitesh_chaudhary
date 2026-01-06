@@ -534,8 +534,17 @@ object attribute : Defined within methods (most commonly in the __init__ method)
 - property : we use @property decorator on any method in class to use method as a property
 
 ## Polymorphism : operator Ocerloading
+Ans : polymorphism  is the ability of a same method, function or operator to behave differently based on the context.
+# Q: Python memory Management
+# Q: Yield
+# Q: Exception
+# Q: Name space and variable scope 
+Ans : Namespace is a system that manages all the names (identifiers for variables, functions, classes, etc.) in a program, mapping each name to its corresponding object in memory to prevent naming conflicts
+Built-in Namespace: Contains all the built-in functions (e.g., print(), len()) and exceptions that are always available when the interpreter is running.
+Global Namespace: Contains names defined at the top level of a script or a module. It is created when the module is run and persists until the program ends.
+Enclosing Namespace: Exists for nested functions. It is the namespace of the outer function within which an inner function is defined.
+Local Namespace: Contains names defined inside a function or a class method. This namespace is temporary; it is created when the function is called and destroyed when the function returns. 
 
-# Q:
 ```Python
 
 ```
