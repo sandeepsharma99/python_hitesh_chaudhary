@@ -540,6 +540,19 @@ Ans : polymorphism  is the ability of a same method, function or operator to beh
  A function that contains yield becomes a generator function. It returns a generator object, which is a type of iterator.
 # Q: Yield
 Ans : yield pauses the function's execution and saves its state (local variables, instruction pointer, etc.). Control is then transferred back to the caller. When the caller requests the next value (typically via a for loop or the next() function), the generator function resumes execution from where it left off, continuing until the next yield statement is encountered or the function ends
+* Memory Efficiency: This mechanism is highly memory efficient, especially when dealing with large or infinite sequences of data, as the entire dataset is never loaded into memory simultaneously
+```Python
+def count_up_to(maximum):
+    i = 0
+    while i < maximum:
+        yield i
+        i += 1
+
+# Using the generator in a for loop
+for number in count_up_to(5):
+    print(number)
+```
+
 # Q: Exception
 # Q: Name space and variable scope 
 Ans : Namespace is a system that manages all the names (identifiers for variables, functions, classes, etc.) in a program, mapping each name to its corresponding object in memory to prevent naming conflicts
@@ -551,6 +564,7 @@ Local Namespace: Contains names defined inside a function or a class method. Thi
 ```Python
 
 ```
+
 
 
 
