@@ -555,13 +555,20 @@ for number in count_up_to(5):
 
 # Q: Exception
 # Q: Name space and variable scope 
-Ans : Namespace is a system that manages all the names (identifiers for variables, functions, classes, etc.) in a program, mapping each name to its corresponding object in memory to prevent naming conflicts
-Built-in Namespace: Contains all the built-in functions (e.g., print(), len()) and exceptions that are always available when the interpreter is running.
-Global Namespace: Contains names defined at the top level of a script or a module. It is created when the module is run and persists until the program ends.
-Enclosing Namespace: Exists for nested functions. It is the namespace of the outer function within which an inner function is defined.
+### Ans : The place where a variable is stored, There are the local, global and built-in namespaces as well as nested namespaces in objects
+* Namespace is a system that manages all the names (identifiers for variables, functions, classes, etc.) in a program, mapping each name to its corresponding object in memory to prevent naming conflicts
+* Built-in Namespace: Contains all the built-in functions (e.g., print(), len()) and exceptions that are always available when the interpreter is running.
+* Global Namespace: Contains names defined at the top level of a script or a module. It is created when the module is run and persists until the program ends.
+* Enclosing Namespace: Exists for nested functions. It is the namespace of the outer function within which an inner function is defined.
 Local Namespace: Contains names defined inside a function or a class method. This namespace is temporary; it is created when the function is called and destroyed when the function returns. 
 
 # Q: what is PIP name 5 package and module 
+Ans : 
+* PIP is the package manager.We can use PIP to install packages that do not come with Python. 
+* Package refers to a distribution of Python code that includes one or more modules or libraries. These packages are typically published on the Python Package Index (PyPI) and can be easily installed using pip.
+ ex: flask , Django, Numpy, Pandas, Matplotlib, Seaborn 
+* A module is a single file containing related code (functions, classes, variables), while a package is a directory that organizes multiple modules and sub-packages into a namespace, typically identified by a special __init__.py file (in Python) that signals it's a package
+Examples of modules: Datetime, Math, Random etc.
 
 ```Python
 
