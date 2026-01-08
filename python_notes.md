@@ -555,7 +555,7 @@ for number in count_up_to(5):
 
 # Q: Exception
 # Q: Name space and variable scope 
-###### Ans : The place where a variable is stored, There are the local, global and built-in namespaces as well as nested namespaces in objects
+#### Ans : The place where a variable is stored, There are the local, global and built-in namespaces as well as nested namespaces in objects
 * Namespace is a system that manages all the names (identifiers for variables, functions, classes, etc.) in a program, mapping each name to its corresponding object in memory to prevent naming conflicts
 * Built-in Namespace: Contains all the built-in functions (e.g., print(), len()) and exceptions that are always available when the interpreter is running.
 * Global Namespace: Contains names defined at the top level of a script or a module. It is created when the module is run and persists until the program ends.
