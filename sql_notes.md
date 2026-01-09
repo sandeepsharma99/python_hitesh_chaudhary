@@ -93,7 +93,8 @@ Ans : automatically update to match the new value from parent(primary key) table
 
 # Sql Joins : join is used to combine row from two or more tables, based on related column between them ad pick only common or matching data/row.
 
-# INNER JOIN : combines rows from two or more tables, returning only the rows where the specified condition (usually matching values in a common column) is true in both tables, effectively showing the intersection of the data
+# Q: INNER JOIN 
+INNER JOIN : combines rows from two or more tables, returning only the rows where the specified condition (usually matching values in a common column) is true in both tables, effectively showing the intersection of the data
 ```sql 
 SELECT Products.ProductName, Categories.CategoryName
 FROM Products
