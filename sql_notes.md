@@ -28,7 +28,8 @@ it is used to perform crud operations: Create , Read , Update , Delete.
 # what is the difference between char and varchar 
 Ans : CHAR is a datatype it always use the specified number of byte regarless of the length of the store string where VARCHAR occupies the space require for actual data
 
-# constraint : specified rules in table column. ensurig data consistency integrity
+# Constraint
+Ans : specified rules in table column. ensurig data consistency integrity
 primary key ,foreign key, unique,not null ,default, check 
 
 # What is Primary Key and Foreign Key?
@@ -71,10 +72,10 @@ create table table_name(
 );
 ```
 # what is Aggregate Function ?
-Ans : Aggregate fimction perform a calculation on set of value , and return a single value.
+Ans : Aggregate function perform a calculation on set of value , and return a single value.
 - count() , max(), min(), avg(), sum()
 
-# update query :
+# update query :update and set
 ``` update TB_name set grade = "A+" where grade = "A" ```
 # Set sql_safe_updates = 0; -> enables updation on exiting table
 
