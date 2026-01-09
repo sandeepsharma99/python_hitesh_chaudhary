@@ -94,15 +94,15 @@ Ans : automatically update to match the new value from parent(primary key) table
 # Sql Joins : 
 #### Ans: join is used to combine row from two or more tables, based on related column between them ad pick only common or matching data/row.
 
-### INNER JOIN 
+#### INNER JOIN 
 INNER JOIN : combines rows from two or more tables, returning only the rows where the specified condition (usually matching values in a common column) is true in both tables, effectively showing the intersection of the data
 ```sql 
 SELECT Products.ProductName, Categories.CategoryName
 FROM Products
 INNER JOIN Categories ON Products.CategoryID = Categories.CategoryID;
 ```
-### OUTER JOIN :
-# left join : return all record from the left table, and the match record from the right table.
+#### OUTER JOIN :
+### left join : return all record from the left table, and the match record from the right table.
 ```sql
 SELECT columns
 FROM left_table
@@ -124,7 +124,7 @@ FROM table1
 FULL JOIN table2
 ON table1.column = table2.column;
 ```
-# left exclusive : retrieves all records from the left table that have no matching records in the right table
+### left exclusive : retrieves all records from the left table that have no matching records in the right table
 ```sql
 SELECT C.CustomerName, O.OrderID
 FROM Customers C
@@ -132,7 +132,7 @@ LEFT JOIN Orders O ON C.CustomerID = O.CustomerID
 WHERE O.CustomerID IS NULL;
 ```
 
-# Right exclusive : a relational database concept used to retrieve only the records present in the right table that do not have a match in the left table
+### Right exclusive : a relational database concept used to retrieve only the records present in the right table that do not have a match in the left table
 ```sql
 SELECT B.* -- Select all columns from the right table
 FROM TableA A
