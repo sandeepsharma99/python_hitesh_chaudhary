@@ -91,16 +91,17 @@ Ans : automatically update to match the new value from parent(primary key) table
 * Change Column ``` ALTER Table table_name change old_column_name new_column_name datatype constraint;```
 ``` ALTER Table table_name rename to new_Table_name;```
 
-# Sql Joins : join is used to combine row from two or more tables, based on related column between them ad pick only common or matching data/row.
+# Sql Joins : 
+#### Ans: join is used to combine row from two or more tables, based on related column between them ad pick only common or matching data/row.
 
-# Q: INNER JOIN 
+### INNER JOIN 
 INNER JOIN : combines rows from two or more tables, returning only the rows where the specified condition (usually matching values in a common column) is true in both tables, effectively showing the intersection of the data
 ```sql 
 SELECT Products.ProductName, Categories.CategoryName
 FROM Products
 INNER JOIN Categories ON Products.CategoryID = Categories.CategoryID;
 ```
-# OUTER JOIN :
+### OUTER JOIN :
 # left join : return all record from the left table, and the match record from the right table.
 ```sql
 SELECT columns
@@ -109,14 +110,14 @@ LEFT JOIN right_table
 ON left_table.common_column = right_table.common_column;
 ```
 
-# right join : return all record from the right table, and match record from the left table
+### right join : return all record from the right table, and match record from the left table
 ```sql
     SELECT *
 FROM LeftTable
 RIGHT JOIN RightTable
 ON LeftTable.CommonColumn = RightTable.CommonColumn;
 ```
-# full join : return all record from both left and right table ,It is basically the combination of LEFT JOIN and RIGHT JOIN
+### full join : return all record from both left and right table ,It is basically the combination of LEFT JOIN and RIGHT JOIN
 ```sql
     SELECT columns
 FROM table1
