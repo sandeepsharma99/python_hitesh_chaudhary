@@ -29,8 +29,9 @@ it is used to perform crud operations: Create , Read , Update , Delete.
 Ans : CHAR is a datatype it always use the specified number of byte regarless of the length of the store string where VARCHAR occupies the space require for actual data
 
 # Constraint
-Ans : specified rules in table column. ensurig data consistency integrity
-primary key ,foreign key, unique,not null ,default, check 
+#### Ans : specified rules for data in table column. ensurig data consistency integrity , accuracy
+* preventing invalid data entries 
+* primary key ,foreign key, unique,not null ,default, check 
 
 # What is Primary Key and Foreign Key?
 * primary key : it is the column in table which uniquely identifies each row, There can be only 1 PK and it should be not null
