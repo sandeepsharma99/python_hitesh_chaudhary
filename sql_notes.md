@@ -18,8 +18,17 @@ it is used to perform crud operations: Create , Read , Update , Delete.
 * DDL (data defination language) : create , alter(modifies the structure), drop(Permanently deletes), truncate( Removes all records from a table), rename
 * DQL (data query language) : Select
 * DML (data manipulation language) : insert update delete
-* DCL (data control language) : Grant and revoke
-* TCL (Transaction control language ) :commit(save), rollback(undoes all the change made in the current transaction sice the last commit) savepoint(Sets a point within a transaction to which you can later roll back, without rolling back the entire transaction.)
+* DCL (data control language) : Grant (Allows access permissions to a database user)and revoke (Cancels previously allowed permissions from a database user.)
+* TCL (Transaction control language ) :commit(Permanently saves the changes to the database), rollback(undoes all the change made in the current transaction sice the last commit) savepoint(Sets a point within a transaction to which you can later roll back, without rolling back the entire transaction.)
+
+# SQL Transactions
+#### Ans : An SQL transaction is a sequence of one or more SQL operations (e.g., INSERT, UPDATE, DELETE) executed as a single unit of work
+* ACID Property of Transaction
+Atomicity: The outcome of a transaction can either be completely successful or completely unsuccessful. The whole transaction must be rolled back if one part of it fails.
+Consistency: Transactions maintain integrity restrictions by moving the database from one valid state to another.
+Isolation: Concurrent transactions are isolated from one another, assuring the accuracy of the data.
+Durability: Once a transaction is committed, its modifications remain in effect even in the event of a system failure.
+* Transactional control commands are only used with the DML Commands such as - INSERT, UPDATE and DELETE.
 
 # what is schema ?
 # datatypes(what type of value is stored in column) : int, varchar(), primary key, Tinyint (-127 to 127),float, date 
@@ -49,7 +58,7 @@ it can be self-referencing.
 
 # Q: What is the difference between drop truncate and delete ?
 Ans: 
-* Delete : remove specific rows from a table based on a given condition syntax :```DELETE FROM table_name WHERE condition```
+* Delete : remove specific rows from a table based on a specific condition , used with where clause syntax :```DELETE FROM table_name WHERE condition```
 * Drop : used to remove  completely table permanentely, its structure, and all its data from the database. suntax :``` DROP table <table_name>;```
 * Truncate :  used to remove all rows from a table efficiently, without deleting the table’s structure or schema. ``` TRUNCATE table <table_name>;```
 
