@@ -164,13 +164,15 @@ SELECT name
 FROM employees
 WHERE salary > (SELECT AVG(salary) FROM employees);
 ```
-# Q: My Sql view : view is the virtual table based on the result statement. view always show up-to-date data. the database engine every recreates the view, every time user query it. Enhance Security
+# Q: My Sql view : SQL View is a virtual table created from the result of a SELECT query. view always show up-to-date data. the database engine every recreates the view, every time user query it. Enhance Security
 
 ```sql
 CREATE VIEW view_name AS
 SELECT column1, column2, ...
 FROM table_name
 WHERE condition;
+
+select * from view_name;
 ```
 
 
