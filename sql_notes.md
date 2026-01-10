@@ -103,10 +103,10 @@ Ans : automatically update to match the new value from parent(primary key) table
 ``` ALTER Table table_name rename to new_Table_name;```
 
 # Sql Joins : 
-#### Ans: join is used to combine row from two or more tables, based on related column between them ad pick only common or matching data/row.
+#### Ans: join is used to combine row from two or more tables, based on related column between them and pick only common or matching data/row.
 
 #### INNER JOIN 
-INNER JOIN : combines rows from two or more tables, returning only the rows where the specified condition (usually matching values in a common column) is true in both tables, effectively showing the intersection of the data
+INNER JOIN :Shows the intersection of the data. it combines rows from two or more tables, returning only the rows where the specified condition (usually matching values in a common column) is true in both tables.
 ```sql 
 SELECT Products.ProductName, Categories.CategoryName
 FROM Products
@@ -150,10 +150,22 @@ FROM TableA A
 RIGHT JOIN TableB B ON A.matching_column = B.matching_column
 WHERE A.matching_column IS NULL; -- Filter where there was no match in the left table
 ```
-# full exclusive join :
+### Union : UNION operator is used to combine the result sets of two or more SELECT queries into a single output providing only distinct list of records, avoid dublicate.
+```sql
+    SELECT City FROM Customers
+UNION
+SELECT City FROM Suppliers
+ORDER BY City;
 
-# Union :
-# union all : 
+```
+
+### union all : UNION ALL operator combines the result sets of two or more SELECT query into a single table, including all duplicate rows
+```sql
+    SELECT name, department FROM Employees
+UNION ALL
+SELECT name, department FROM Contractors
+ORDER BY department;
+```
 
 # Q: what is sub query ?
 Ans : sub query or inner query or a nested query is a query within another query 
@@ -164,7 +176,8 @@ SELECT name
 FROM employees
 WHERE salary > (SELECT AVG(salary) FROM employees);
 ```
-# Q: My Sql view : SQL View is a virtual table created from the result of a SELECT query. view always show up-to-date data. the database engine every recreates the view, every time user query it. Enhance Security
+# Q: My Sql view : 
+####ANS : SQL View is a virtual table created from the result of a SELECT query. view always show up-to-date data. the database engine recreates the view, every time when user query it. it Enhance Security
 
 ```sql
 CREATE VIEW view_name AS
@@ -175,7 +188,7 @@ WHERE condition;
 select * from view_name;
 ```
 
-
 ```sql
 
 ```
+
