@@ -518,12 +518,12 @@ defalut:It executes automatically when object is created with no parameters
 ```
 parameterized : A parameterized constructor accepts arguments to initialize the object's attributes with specific values.
 - self :  is a reference to the current instance of a class and is used to access the instance's attributes and methods it is the first mandatory parameter for any instance method within a class definition.  
-- Attributes : variable/values/data/properties/
+- Attributes : variable/properties/values/data/
+
 class attributes : Defined directly within the class body, but outside any __init__ or other methods.
 object attribute : Defined within methods (most commonly in the __init__ method) using self.<attribute_name>.  obj att > class att
 - Methods(Function) : simply function is called method
 - Static Methods(class level) : A static method is a function that belongs to a class's namespace but does not require access to instance-specific data
-- Decorators : decorator is a function (or class) that modifies or extends the behavior of another function, method, or class without changing its actual source code 
 - Absraction :Hiding the implementaion of a class and only showing the essential feature to the user.
 - Encapsulation : Wrapping data and function into a single unit(object)
 - Private(like) Attribute & Methods : Private attribute and method are meant to be use only within the class and are not accessable by object.
@@ -532,6 +532,30 @@ object attribute : Defined within methods (most commonly in the __init__ method)
 - super() :
 - @classmethod :
 - property : we use @property decorator on any method in class to use method as a property
+
+# Q: Decorators
+Ans:
+#### decorator is a function (or class) that modifies or extends the behavior of another function, method, or class without changing its actual source code
+* A decorator is essentially a function that takes another function as an argument and returns a new function with enhanced functionality.
+* Decorators are often used in scenarios such as logging, authentication and memorization, allowing us to add additional functionality to existing functions or methods in a clean, reusable way.
+```Python
+    def decorator(func):
+    def wrapper():
+        print("Before calling the function.")
+        func()
+        print("After calling the function.")
+    return wrapper
+
+@decorator # Applying the decorator to a function
+def greet():
+    print("Hello, World!")
+greet()
+``` 
+#### Real-World Uses of Decorators :
+1. Authentication: Restrict access in web apps
+2. Rate Limiting: Control API usage per user.
+3. Caching: Store results using functools.lru_cache.
+
 
 ## Polymorphism : operator Ocerloading
 Ans : polymorphism  is the ability of a same method, function or operator to behave differently based on the context.
@@ -560,7 +584,7 @@ for number in count_up_to(5):
 * Built-in Namespace: Contains all the built-in functions (e.g., print(), len()) and exceptions that are always available when the interpreter is running.
 * Global Namespace: Contains names defined at the top level of a script or a module. It is created when the module is run and persists until the program ends.
 * Enclosing Namespace: Exists for nested functions. It is the namespace of the outer function within which an inner function is defined.
-Local Namespace: Contains names defined inside a function or a class method. This namespace is temporary; it is created when the function is called and destroyed when the function returns. 
+* Local Namespace: Contains names defined inside a function or a class method. This namespace is temporary; it is created when the function is called and destroyed when the function returns. 
 
 # Q: what is PIP name 5 package and module 
 Ans : 
@@ -576,6 +600,7 @@ Examples of modules: Datetime, Math, Random etc.
 ```Python
 
 ```
+
 
 
 
