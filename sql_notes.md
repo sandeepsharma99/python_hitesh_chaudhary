@@ -48,6 +48,8 @@ Ans : CHAR is a datatype it always use the specified number of byte regarless of
 FK can have dublicate and null value
 it can be self-referencing.
 
+# what is the differece between primary key and unique key ?
+
 # Q: what is the difference between where and Having clause ?
 * Where clause : filters rows based on one or more conditions so your query returns (or modifies) only the records that matchs the condition.
 * HAVING Clause : similar to where clause applies some condition on row .it is  Used when we want to apply condition after grouping. ``` select city column_name table_name group by city having avg(marks)>80; ```
