@@ -60,6 +60,15 @@ Ans :
 
 
 # Q: what is cluster and non cluster index ?
+Ans : 
+## cluster index define the order in which is data is physically stored in a table for ex: Dictionary.
+* A table can only one cluster index.
+* cluster is faster.
+
+
+## Non cluster index is stored in one place and table data is stored in another place. for ex: Book index.
+* a table can have multiple non cluster index
+* Non cliuster is slower 
 
 # Q: what is the difference between where and Having clause ?
 * Where clause : filters rows based on one or more conditions so your query returns (or modifies) only the records that matchs the condition.
@@ -180,6 +189,11 @@ SELECT name, department FROM Contractors
 ORDER BY department;
 ```
 
+### self join : 
+```sql
+    ;
+```
+
 # Q: what is sub query ?
 Ans : sub query or inner query or a nested query is a query within another query 
 A subquery must always be enclosed within parentheses ()
@@ -190,7 +204,7 @@ FROM employees
 WHERE salary > (SELECT AVG(salary) FROM employees);
 ```
 # Q: My Sql view : 
-####ANS : SQL View is a virtual table created from the result of a SELECT query. view always show up-to-date data. the database engine recreates the view, every time when user query it. it Enhance Security
+ANS : SQL View is a virtual table created from the result of a SELECT query. view always show up-to-date data. the database engine recreates the view, every time when user query it. it Enhance Security
 
 ```sql
 CREATE VIEW view_name AS
