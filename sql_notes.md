@@ -43,12 +43,23 @@ Ans : CHAR is a datatype it always use the specified number of byte regarless of
 * primary key ,foreign key, unique,not null ,default, check 
 
 # What is Primary Key and Foreign Key?
-* primary key : it is the column in table which uniquely identifies each row, There can be only 1 PK and it should be not null
+* primary key : it is the column in table which uniquely identifies each row in a table, There can be only 1 PK and it should be not null
 * Foreign Key : it is a cloumn in one table that is link to the primary key of another table and it ensure consistency and integrity of data.
 FK can have dublicate and null value
 it can be self-referencing.
 
 # what is the differece between primary key and unique key ?
+Ans : 
+| Feature        | Primary Key                                                                 | Unique Key                                                               |
+|--------------|------------------------------------------------------------------------------|--------------------------------------------------------------------------|
+| Purpose      | Uniquely identifies each record (row) in a table (entity integrity).         | Ensures uniqueness in a column but isn't the primary identifier.         |
+| Null Values  | Does not allow `NULL` values; every record must have a value.                | Allows one `NULL` value (most systems).                                  |
+| Quantity     | Only one primary key per table.                                              | Multiple unique keys per table are allowed.                              |
+| Index        | Usually creates a clustered index (sorts physical data).                     | Usually creates a non-clustered index.                                   |
+| Modification | Generally not modified.                                                      | Values can often be modified.                                            |
+
+
+# Q: what is cluster and non cluster index ?
 
 # Q: what is the difference between where and Having clause ?
 * Where clause : filters rows based on one or more conditions so your query returns (or modifies) only the records that matchs the condition.
