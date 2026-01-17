@@ -24,10 +24,10 @@ it is used to perform crud operations: Create , Read , Update , Delete.
 # SQL Transactions
 #### Ans : An SQL transaction is a sequence of one or more SQL operations (e.g., INSERT, UPDATE, DELETE) executed as a single unit of work
 * ACID Property of Transaction
-Atomicity: The outcome of a transaction can either be completely successful or completely unsuccessful. The whole transaction must be rolled back if one part of it fails.
-Consistency: Transactions maintain integrity restrictions by moving the database from one valid state to another.
-Isolation: Concurrent transactions are isolated from one another, assuring the accuracy of the data.
-Durability: Once a transaction is committed, its modifications remain in effect even in the event of a system failure.
+* Atomicity: The outcome of a transaction can either be completely successful or completely unsuccessful. The whole transaction must be rolled back if one part of it fails.
+* Consistency: Transactions maintain integrity restrictions by moving the database from one valid state to another.
+* Isolation: Concurrent transactions are isolated from one another, assuring the accuracy of the data.
+* Durability: Once a transaction is committed, its modifications remain in effect even in the event of a system failure.
 * Transactional control commands are only used with the DML Commands such as - INSERT, UPDATE and DELETE.
 
 # what is schema ?
@@ -61,12 +61,12 @@ Ans :
 
 # Q: what is cluster and non cluster index ?
 Ans : 
-## cluster index define the order in which is data is physically stored in a table for ex: Dictionary.
+#### cluster index define the order in which is data is physically stored in a table for ex: Dictionary.
 * A table can only one cluster index.
 * cluster is faster.
 
 
-## Non cluster index is stored in one place and table data is stored in another place. for ex: Book index.
+#### Non cluster index is stored in one place and table data is stored in another place. for ex: Book index.
 * a table can have multiple non cluster index
 * Non cliuster is slower 
 
