@@ -520,14 +520,29 @@ parameterized : A parameterized constructor accepts arguments to initialize the 
 - self :  is a reference to the current instance of a class and is used to access the instance's attributes and methods it is the first mandatory parameter for any instance method within a class definition.  
 - Attributes : variable/properties/values/data/
 
-class attributes : Defined directly within the class body, but outside any __init__ or other methods.
-object attribute : Defined within methods (most commonly in the __init__ method) using self.<attribute_name>.  obj att > class att
+- class attributes : Defined directly within the class body, but outside any __init__ or other methods.
+- object attribute : Defined within methods (most commonly in the __init__ method) using self.<attribute_name>.  obj att > class att
 - Methods(Function) : simply function is called method
 - Static Methods(class level) : A static method is a function that belongs to a class's namespace but does not require access to instance-specific data
 - Absraction :Hiding the implementaion of a class and only showing the essential feature to the user.
 - Encapsulation : Wrapping data and function into a single unit(object)
 - Private(like) Attribute & Methods : Private attribute and method are meant to be use only within the class and are not accessable by object.
-- Inheritance :
+```Python
+class MyClass:
+    def __init__(self):
+        self._protected_attribute = "I am protected" # Convention only
+
+    def _protected_method(self):
+        return "You shouldn't call me directly"
+
+obj = MyClass()
+print(obj._protected_attribute) # Accessible, but discouraged
+print(obj._protected_method())  # Accessible, but discouraged
+```
+- Inheritance : Inheritance allows us to define a class that inherits all the methods and properties from another class.
+    Parent class is the class being inherited from, also called base class.
+    Child class is the class that inherits from another class, also called derived class.
+
 - multilevel inheritance : 
 - super() :
 - @classmethod :
@@ -577,12 +592,14 @@ for number in count_up_to(5):
     print(number)
 ```
 
-# Q: Exception
+# Q: Exception : to handle error helps in debugging
 # Q: Name space and variable scope 
 #### Ans : The place where a variable is stored, There are the local, global and built-in namespaces as well as nested namespaces in objects
 * Namespace is a system that manages all the names (identifiers for variables, functions, classes, etc.) in a program, mapping each name to its corresponding object in memory to prevent naming conflicts
 * Built-in Namespace: Contains all the built-in functions (e.g., print(), len()) and exceptions that are always available when the interpreter is running.
 * Global Namespace: Contains names defined at the top level of a script or a module. It is created when the module is run and persists until the program ends.
+* It contains the names (variables, functions, etc.) that are created inside a function, and they work only inside that function.
+
 * Enclosing Namespace: Exists for nested functions. It is the namespace of the outer function within which an inner function is defined.
 * Local Namespace: Contains names defined inside a function or a class method. This namespace is temporary; it is created when the function is called and destroyed when the function returns. 
 
@@ -590,9 +607,15 @@ for number in count_up_to(5):
 Ans : 
 * PIP is the python package manager.We can use PIP to install packages that do not come with Python installation. 
 * Package : A directory containing Python modules and a file with the name __init__.py. These packages are typically published on the Python Package Index (PyPI) and can be easily installed using pip. and there are thoushands of packages in Python Package Index (PyPI)
- ex: flask , Django, Numpy, Pandas, Matplotlib, Seaborn 
+ ex: flask , Django, Numpy, Pandas,jupyter, Matplotlib, Seaborn 
 * A module is a single file containing related code (functions, classes, variables), while a package is a directory that organizes multiple modules and sub-packages into a namespace, typically identified by a special __init__.py file (in Python) that signals it's a package
 Examples of modules: Datetime, Math, Random etc.
+
+# Q:  what is kernel ?
+#### Ans : system -> python env, numpy space -(memory/disk)
+
+# Q:  what is Masking
+#### Ans :
 
 # Q:  
 #### Ans :
@@ -600,6 +623,7 @@ Examples of modules: Datetime, Math, Random etc.
 ```Python
 
 ```
+
 
 
 
