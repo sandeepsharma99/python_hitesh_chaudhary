@@ -617,7 +617,7 @@ Examples of modules: Datetime, Math, Random etc.
 # Q:  what is Masking
 #### Ans :
 
-# Q:  
+# Q:  what is vector ?
 #### Ans :
 
 ```Python
