@@ -609,7 +609,7 @@ Ans :
 * Package : A directory containing Python modules and a file with the name __init__.py. These packages are typically published on the Python Package Index (PyPI) and can be easily installed using pip. and there are thoushands of packages in Python Package Index (PyPI)
  ex: flask , Django, Numpy, Pandas,jupyter, Matplotlib, Seaborn 
 * A module is a single file containing related code (functions, classes, variables), while a package is a directory that organizes multiple modules and sub-packages into a namespace, typically identified by a special __init__.py file (in Python) that signals it's a package
-Examples of modules: Datetime, Math, Random etc.
+Examples of modules: Datetime, Math, os, json Random etc.
 
 # Q:  what is kernel ?
 #### Ans : system -> python env, numpy space -(memory/disk)
