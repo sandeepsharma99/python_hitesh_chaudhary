@@ -178,7 +178,7 @@ mystr.index("",startindex,endindex) # return index of first occurrence
 mystr.count("") # returns an integer
 len(mystr) # returns the total number of characters
 mystr.startswith()/endswith() #  return True or False
-" ".join(words) # returns a new single string
+" ".join(string) # returns a new single string
 mystr[index] # return character at that index | **Accessing character**
 mystr[start:stop:step] # return a new substring | Slicing | mystr[::]->create shallow copy
 for char in s:  # iteration

@@ -31,6 +31,7 @@ it is used to perform crud operations: Create , Read , Update , Delete.
 * Transactional control commands are only used with the DML Commands such as - INSERT, UPDATE and DELETE.
 
 # what is schema ?
+#### Ans : A database schema is the design or structure of a database that defines how data is organized and how different data elements relate to each other
 # datatypes(what type of value is stored in column) : int, varchar(), primary key, Tinyint (-127 to 127),float, date 
 # signed and unsigned : signed numbar can be positive and negative while unsigned can only be positive. allow large range of same no.of bit  
 
