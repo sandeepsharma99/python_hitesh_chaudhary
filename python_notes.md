@@ -575,6 +575,7 @@ greet()
 ## Polymorphism : operator Ocerloading
 Ans : polymorphism  is the ability of a same method, function or operator to behave differently based on the context.
 # Q: Python memory Management
+Memory management refers to process of allocating and deallocating memory to a program while it runs. Python handles memory management automatically using mechanisms like reference counting and garbage collection, which means programmers do not have to manually manage memory.
 # Q: Generators:
  A function that contains yield becomes a generator function. It returns a generator object, which is a type of iterator.
 # Q: Yield

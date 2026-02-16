@@ -8,9 +8,17 @@
 #     print(i)
 
 
+# def even_no_generator(limit):
+#     for i in range(0,limit+1,2):
+#         yield i
+
+# for i in even_no_generator(20):
+#     print(i)
+
+
 def even_no_generator(limit):
     for i in range(0,limit+1,2):
         yield i
 
 for i in even_no_generator(20):
-    print(i)
+    print(i,end=" ")
