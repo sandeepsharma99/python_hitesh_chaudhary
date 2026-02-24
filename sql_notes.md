@@ -158,6 +158,9 @@ FROM table1
 FULL JOIN table2
 ON table1.column = table2.column;
 ```
+### cross join : 
+
+
 ### left exclusive : retrieves all records from the left table that have no matching records in the right table
 ```sql
 SELECT C.CustomerName, O.OrderID
