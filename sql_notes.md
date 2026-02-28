@@ -198,6 +198,8 @@ ORDER BY department;
     ;
 ```
 
+
+
 # Q: what is sub query ?
 Ans : sub query or inner query or a nested query is a query within another query 
 A subquery must always be enclosed within parentheses ()

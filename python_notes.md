@@ -592,6 +592,7 @@ def count_up_to(maximum):
 for number in count_up_to(5):
     print(number)
 ```
+# Q: what is Normalization?
 
 # Q: Exception : to handle error helps in debugging
 # Q: Name space and variable scope 
