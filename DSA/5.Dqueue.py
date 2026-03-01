@@ -3,7 +3,7 @@ class Deque:
         self.items = []
     
     def isEmpty(self):
-        return len(self.items) == 0
+        return len(self.items) == 0 # check length of array empty or not 
     
     def insertAtEnd(self,value):
         self.items.append(value)
@@ -12,10 +12,10 @@ class Deque:
         if(self.isEmpty()):
             print("Queue is Empty")
         else:
-            return self.items.pop(0)
+            return self.items.pop(0) # removing element fron the beginning
         
     def insertAtFront(self,value):
-        self.items.insert(0,value)
+        self.items.insert(0,value) # insert at the beginning
 
     def deleteAtEnd(self):
         if(self.isEmpty()==0):

@@ -3,16 +3,16 @@ class Queue:
         self.items = []
 
     def isEmpty(self):
-        return len(self.items) == 0
+        return len(self.items) == 0 # check length of the array is  empty or not
 
     def insert(self,value):
-        self.items.append(value)
+        self.items.append(value) # insert at the end
 
     def delete(self):
         if(self.isEmpty()):
             print("Queue is empty")
         else:
-           return self.items.pop(0)
+           return self.items.pop(0) # deleteing from the beginning
         
 q = Queue()
 q.insert(10)
