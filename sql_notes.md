@@ -43,6 +43,14 @@ Ans : CHAR is a datatype it always use the specified number of byte regarless of
 * preventing invalid data entries 
 * primary key ,foreign key, unique,not null ,default, check 
 
+# write a code for enum and explain its purpose?
+```sql
+    CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    order_status ENUM('PLACED','SHIPPED','DELIVERED','CANCELLED')
+);
+``
+
 # What is Primary Key and Foreign Key?
 * primary key : it is the column in table which uniquely identifies each row in a table, There can be only 1 PK and it should be not null
 * Foreign Key : it is a cloumn in one table that is link to the primary key of another table and it ensure consistency and integrity of data.
