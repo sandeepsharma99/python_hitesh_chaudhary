@@ -49,7 +49,7 @@ Ans : CHAR is a datatype it always use the specified number of byte regarless of
     order_id INT PRIMARY KEY,
     order_status ENUM('PLACED','SHIPPED','DELIVERED','CANCELLED')
 );
-``
+```
 
 # What is Primary Key and Foreign Key?
 * primary key : it is the column in table which uniquely identifies each row in a table, There can be only 1 PK and it should be not null
