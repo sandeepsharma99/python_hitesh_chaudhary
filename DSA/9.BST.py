@@ -1,39 +1,66 @@
+#  chat gpt code
 class Node:
     def __init__(self,value):
         self.left = None
         self.right = None
         self.data = value
 
+
 def insert(root,value):
-        if(root==None):
-            return Node(value)
-        if(root.data == value):
-            return root
-        if(root.data>value):
-            root.left = insert(root.left,value)
-        else:
-            root.right = insert(root.right,value)
+    if(root == None):
+        return Node(value)
+
+    if(root.data > value):
+        root.left = insert(root.left,value)
+    elif(root.data < value):
+        root.right = insert(root.right,value)
+
+    return root
+
+
+def get_successor(root):
+    root = root.right
+    while(root != None and root.left != None):
+        root = root.left
+    return root
+
+
+def delete(root,value):
+
+    if(root == None):
         return root
 
-def search(root,value):
-        if(root==None):
-            print("Elemenet not found",end='\n')
-            return
-        if(root.data == value):
-            print("element Found",end='\n')
-            return
-        if(root.data>value):
-            search(root.left,value)
-        else:
-            search(root.right,value)
+    if(root.data > value):
+        root.left = delete(root.left,value)
+
+    elif(root.data < value):
+        root.right = delete(root.right,value)
+
+    else:   # node found
+
+        # case 1 & 2 (0 or 1 child)
+        if(root.left == None):
+            return root.right
+
+        if(root.right == None):
+            return root.left
+
+        # case 3 (2 children)
+        succ = get_successor(root)
+        root.data = succ.data
+        root.right = delete(root.right, succ.data)
+
+    return root
 
 
 def InOrder(root):
-     if(root!=None):
-          InOrder(root.left)
-          print(root.data, end=' ')
-          InOrder(root.right)
+    if(root != None):
+        InOrder(root.left)
+        print(root.data,end=" ")
+        InOrder(root.right)
 
+
+# Tree creation
 root = insert(None,20)
 root = insert(root,15)
 root = insert(root,30)
@@ -43,6 +70,89 @@ root = insert(root,18)
 root = insert(root,25)
 root = insert(root,50)
 
+print("Before Deletion:")
 InOrder(root)
-search(root,18)
-search(root,100)
+
+print("\n")
+
+root = delete(root,30)
+
+print("After Deletion:")
+InOrder(root)
+
+
+# class Node:
+#     def __init__(self,value):
+#         self.left = None
+#         self.right = None
+#         self.data = value
+
+# def insert(root,value):
+#         if(root==None):
+#             return Node(value)
+#         if(root.data == value):
+#             return root
+#         if(root.data>value):
+#             root.left = insert(root.left,value)
+#         else:
+#             root.right = insert(root.right,value)
+#         return root
+
+# def search(root,value):
+#         if(root==None):
+#             print("Elemenet not found",end='\n')
+#             return
+#         if(root.data == value):
+#             print("element Found",end='\n')
+#             return
+#         if(root.data>value):
+#             search(root.left,value)
+#         else:
+#             search(root.right,value)
+
+# def get_successor(root):
+#     root = root.right
+#     while( root!= None and root.left != None):
+#         root = root.left
+#     return root
+
+# # Deletion of leaf (0 child and having 1 child)
+# def delete(root,value):
+#     if(root == None):
+#      return root
+#     if(root.data >value):
+#         root.left = delete(root.left, value)
+#     if(root.data<value):
+#         root.right = delete(root.right, value)
+#     else:
+#         if(root.left == None):
+#             return root.right
+#         if(root.right == None):
+#             return root.left
+#         else:
+#             succ = get_successor(root)
+#             root.data = succ.data
+#             root.right = delete(succ, succ.data)
+        
+
+# def InOrder(root):
+#      if(root!=None):
+#           InOrder(root.left)
+#           print(root.data, end=' ')
+#           InOrder(root.right)
+
+# root = insert(None,20)
+# root = insert(root,15)
+# root = insert(root,30)
+# root = insert(root,40)
+# root = insert(root,12)
+# root = insert(root,18)
+# root = insert(root,25)
+# root = insert(root,50)
+
+# InOrder(root)
+# print("\n")
+# delete(root,12)
+# InOrder(root)
+# # search(root,18)
+# # search(root,100)  
