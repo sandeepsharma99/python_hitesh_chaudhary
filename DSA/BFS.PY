@@ -1,3 +1,5 @@
+from collections import deque
+
 class Graph:
     def __init__(self,vertex):
         self.mat = [[0]*vertex for x in range(vertex)]
@@ -14,27 +16,29 @@ class Graph:
         for row in self.mat:
             print(' '.join(map(str,row)))
 
-    def dfs(self,src):
+    def  BFS(self,src):
         visited = [False]*self.size
-        stack = [src]
+        queue = deque([src])
+        visited[src] = True
 
-        while(stack):
-            v = stack.pop()
-
-            if(visited[v] == False):
-                print(v, end=' -> ')
-                visited[v] = True
+        while(queue):
+            v = queue.popleft()
+            print(v, end=' ')
 
             for i in range(self.size):
-                if self.mat[v][i] == 1 and visited[i] == False:
-                    stack.append(i)
+                if(self.mat[v][i]== 1 and visited[i] == False):
+                    visited[i] = True
+                    queue.append(i)
 
-g = Graph(60)
+g = Graph(8)
 g.add_edge(0,1)
-g.add_edge(0,2)
-g.add_edge(2,3)
-g.add_edge(2,4)
+g.add_edge(0,3)
+g.add_edge(1,3)
 g.add_edge(3,5)
+g.add_edge(3,4)
 g.add_edge(4,5)
+g.add_edge(4,6)
+g.add_edge(6,2)
+g.add_edge(6,7)
 
-g.dfs(0)
+g.BFS(0)
