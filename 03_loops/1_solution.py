@@ -6,4 +6,4 @@ for num in number:
     if num >0:
         count+=1
 
-print(count,": Postive No.")
+print(count,": Postive No.")    
