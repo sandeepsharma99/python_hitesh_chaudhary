@@ -571,6 +571,7 @@ greet()
 2. Rate Limiting: Control API usage per user.
 3. Caching: Store results using functools.lru_cache.
 
+# Q: what is Normalization?
 
 ## Polymorphism : operator Ocerloading
 Ans : polymorphism  is the ability of a same method, function or operator to behave differently based on the context.
