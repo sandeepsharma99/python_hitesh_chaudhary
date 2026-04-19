@@ -626,6 +626,9 @@ Examples of modules: Datetime, Math, os, json Random etc.
 # Q:  what is Data Analysis?
 #### Ans :
 
+# Q:  what is Singly Linked List & Doubly Linked list?
+#### Ans : Linked List is the fundamental of data Structure. It is consist of sequence of Node, Where each Node conatin data and reference to the next Node.
+
 ```Python
 
 ```

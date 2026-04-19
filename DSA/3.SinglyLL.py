@@ -68,3 +68,23 @@ obj.insertATEnd(20)
 obj.insertATEnd(30)
 
 obj.printLL()
+
+class Node:
+    def __init__(self, info, next=None):
+        self.data = info
+        self.next = next
+
+class SinglyLinkedList:
+    def __int__(self, head=None):
+        self.head = head
+
+    def insertAtEnd(self,value):
+        Node(value)
+        if(self.head != None):
+            t1 = self.head
+        while(t1.next !=None):
+            t1 = t1.temp
+        else:
+            self.head = temp
+
+    
