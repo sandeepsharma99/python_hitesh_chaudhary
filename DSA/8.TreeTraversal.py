@@ -32,3 +32,7 @@ root.right.right = Node(8)
 preOrder(root)
 InOrder(root)
 postOrder(root)
+
+
+
+        
