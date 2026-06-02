@@ -541,7 +541,7 @@ print(obj._protected_method())  # Accessible, but discouraged
 ```
 - Inheritance : Inheritance allows us to define a class that inherits all the methods and properties from another class.
     Parent class is the class being inherited from, also called base class.
-    Child class is the class that inherits from another class, also called derived class.
+    Child class is the class that inherits property from another class, also called derived class.
 
 - multilevel inheritance : 
 - super() :
@@ -554,7 +554,7 @@ Ans:
 * A decorator is essentially a function that takes another function as an argument and returns a new function with enhanced functionality.
 * Decorators are often used in scenarios such as logging, authentication and memorization, allowing us to add additional functionality to existing functions or methods in a clean, reusable way.
 ```Python
-    def decorator(func):
+    def decorator(func):r
     def wrapper():
         print("Before calling the function.")
         func()
